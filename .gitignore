@@ -61,3 +61,5 @@ Assets/Plugins/Octane\.meta
 .idea/**/.idea
 
 \.DS_Store
+
+.idea/
