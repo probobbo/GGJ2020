@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +18,4 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
     #endregion
-    
-    
 }
