@@ -13,7 +13,7 @@ public class RoboHand : MonoBehaviour
     protected float remainingUsages = 1f;
 
     protected Rigidbody Rb;
-    private RoboHandController _roboHandController;
+    protected RoboHandController _roboHandController;
 
     protected virtual void Start()
     {
@@ -41,10 +41,16 @@ public class RoboHand : MonoBehaviour
     {
         var statuePiece = other.gameObject.GetComponent<StatuePiece>();
         if (statuePiece == null) return;
-            
-        if (!statuePiece.IsOnTheFloor) return;
-        var impulse = new Vector3(other.impulse.x, -other.impulse.y, other.impulse.z);
-        statuePiece.ApplyForce(impulse * strength);
+
+        if (!statuePiece.IsOnTheFloor)
+        {
+            var impulse = new Vector3(other.impulse.x, 1f, other.impulse.z);
+            statuePiece.ApplyForce(impulse * strength);
+        }
+        else
+        {
+            statuePiece.ApplyForce(other.impulse * strength);
+        }
     }
 
     public void DetachHand()

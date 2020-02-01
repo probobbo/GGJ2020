@@ -16,7 +16,9 @@ public class Bat : RoboHand
 
     public override void ActivateHand()
     {
+        if (_isActive) return;
         base.ActivateHand();
+        remainingUsages--;
         _isActive = true;
         Rb.mass *= batStrength;
     }
