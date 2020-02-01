@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class GenericBullet : MonoBehaviour
 {
-    public float speed;
     public float strength = 1f;
-    public float area;
-
-    private void Start()
+    protected void OnCollisionEnter(Collision other)
     {
+        CollideWithThings(other);
     }
 
-    protected virtual void OnCollisionEnter(Collision other)
+    protected virtual void CollideWithThings(Collision other)
     {
         var statuePiece = other.gameObject.GetComponent<StatuePiece>();
         if (statuePiece == null) return;
