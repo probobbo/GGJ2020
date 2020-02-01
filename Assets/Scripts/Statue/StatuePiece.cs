@@ -67,7 +67,7 @@ namespace Statue
             if (IsPieceConnected())
                 EventManager.Instance.onPieceDisconnected.Invoke(_id,impulse);
             else
-                _rb.AddForce(impulse);
+                _rb.AddForce(impulse,ForceMode.Impulse);
         }
 
         private void OnCollisionEnter(Collision other)
@@ -136,7 +136,7 @@ namespace Statue
             ResetPhysics();
             transform.parent = null;
             _connectedPieces = 0;
-            _rb.AddForce(impulse);
+            _rb.AddForce(impulse,ForceMode.Impulse);
 
             EventManager.Instance.onPieceDisconnected.RemoveListener(DisconnectObject);
         }
