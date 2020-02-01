@@ -1,7 +1,7 @@
 ﻿public enum RoboHandType
 {
     Default,
-    Hand1,
+    Bat,
     Hand2,
     Hand3,
 }
