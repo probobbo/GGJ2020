@@ -9,14 +9,8 @@ public class GenericBullet : Bullet
         var statuePiece = other.gameObject.GetComponent<StatuePiece>();
         if (statuePiece != null)
         {
-            Vector3 impulse;
-            if (statuePiece.IsOnTheFloor)
-                impulse = new Vector3(other.impulse.x, -other.impulse.y, other.impulse.z);
-            else
-                impulse = new Vector3(other.impulse.x, other.impulse.y, other.impulse.z);
-            statuePiece.ApplyForce(impulse * strength);
+            statuePiece.ApplyForce((Vector3.up * strength) + transform.forward);
         }
-
         base.CollideWithThings(other);
     }
 }
