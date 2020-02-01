@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using Managers;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace Statue
-{[RequireComponent(typeof(Rigidbody))]
+{
+    [RequireComponent(typeof(Rigidbody))]
     public class StatuePiece : MonoBehaviour
     {
-        [SerializeField]
-        private bool connected;
         public bool IsOnTheFloor { get; private set; }
+        
+        [SerializeField] private bool connected;
+        private string _id;
+        private int _connectedPieces;
 
         private Rigidbody _rb;
 
@@ -31,6 +35,17 @@ namespace Statue
             if (_joints.Count <= 0)
                 Destroy(gameObject);
             _rb = GetComponent<Rigidbody>();
+            if (connected)
+            {
+                StopPhysics();
+                _id = "-";
+            }
+
+            _connectedPieces = 0;
+        }
+
+        private void Start()
+        {
         }
 
         public void ApplyForce(Vector3 impulse)
@@ -42,8 +57,12 @@ namespace Statue
         {
             if (other.gameObject.CompareTag("Floor"))
                 IsOnTheFloor = true;
+            
+            if(!other.transform.CompareTag("GameController") || !connected)
+                return;
+            EventManager.Instance.onPieceDisconnected.Invoke(_id);
         }
-        
+
         private void OnCollisionExit(Collision other)
         {
             if (other.gameObject.CompareTag("Floor"))
@@ -55,21 +74,45 @@ namespace Statue
             return connected;
         }
 
-        public void ConnectObject(Transform parent)
+        public void UpdateConnections()
+        {
+            _connectedPieces++;
+        }
+
+        public string GetConnectedCount()
+        {
+            return _connectedPieces + "";
+        }
+
+        public string GetId()
+        {
+            return _id;
+        }
+
+        public void ConnectObject(Transform parent, string id)
         {
             if (connected) return;
             connected = true;
             transform.parent = parent;
+            _id = id;
+            EventManager.Instance.onPieceDisconnected.AddListener(DisconnectObject);
+            StopPhysics();
+        }
+
+        public void StopPhysics()
+        {
             _rb.velocity = Vector3.zero;
             _rb.useGravity = false;
             _rb.isKinematic = true;
         }
 
-        public void DisconnectObject()
+        public void DisconnectObject(string id)
         {
-            if (!connected) return;
+            if (!connected || !_id.Contains(id)) return;
             connected = false;
             transform.parent = null;
+            _connectedPieces = 0;
+            EventManager.Instance.onPieceDisconnected.RemoveListener(DisconnectObject);
         }
     }
 }
