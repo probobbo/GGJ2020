@@ -539,17 +539,17 @@ PrefabInstance:
     - target: {fileID: 1971064818879011892, guid: 06b3280205caaca4daab3ddf5eec1f96,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.028
+      value: 0.998
       objectReference: {fileID: 0}
     - target: {fileID: 1971064818879011892, guid: 06b3280205caaca4daab3ddf5eec1f96,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.017
       objectReference: {fileID: 0}
     - target: {fileID: 1971064818879011892, guid: 06b3280205caaca4daab3ddf5eec1f96,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.003
+      value: -0.676
       objectReference: {fileID: 0}
     - target: {fileID: 1971064818879011892, guid: 06b3280205caaca4daab3ddf5eec1f96,
         type: 3}
@@ -590,6 +590,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971064818879011892, guid: 06b3280205caaca4daab3ddf5eec1f96,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971064818879011892, guid: 06b3280205caaca4daab3ddf5eec1f96,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971064818879011892, guid: 06b3280205caaca4daab3ddf5eec1f96,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06b3280205caaca4daab3ddf5eec1f96, type: 3}
@@ -1058,8 +1073,8 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
-  m_Range: 5.2049937
+  m_Intensity: 1.5
+  m_Range: 6.5341654
   m_SpotAngle: 63.612156
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
