@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c8d969711dc7d646b669d15bf7a00de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 10
+  timeToLive: 10
+  strength: 5
 --- !u!1001 &1111936308118656148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79,6 +80,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GenericBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174164795447827254, guid: 9766b9ef6dc5f6145a436fa71a8e79eb,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9766b9ef6dc5f6145a436fa71a8e79eb, type: 3}
