@@ -11,6 +11,7 @@ namespace Managers
         #region Singleton
         public static GameManager Instance;
         public float TimeToSwitchHand = 2f;
+        public float crumbleDelay = 1f;
         private OVRScreenFade _screenFade;
 
         private void Awake()

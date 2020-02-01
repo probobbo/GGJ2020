@@ -197,6 +197,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 738231538221309478, guid: 2a86ea77a8776cf4d86449da1e930d60,
+        type: 3}
+      propertyPath: crumbleDelay
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3794559382383210462, guid: 2a86ea77a8776cf4d86449da1e930d60,
         type: 3}
       propertyPath: m_LocalPosition.x
