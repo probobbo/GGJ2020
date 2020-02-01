@@ -8,6 +8,14 @@ namespace Managers
 {
     public class GameManager : MonoBehaviour
     {
+        public enum  Connection
+        {
+            Cofano,
+            Baule,
+            PortieraFront,
+            PortieraBack,
+            Ruota
+        }
         #region Singleton
         public static GameManager Instance;
         public float TimeToSwitchHand = 2f;

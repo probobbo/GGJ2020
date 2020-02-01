@@ -8,7 +8,7 @@ namespace Managers
     {
     }
 
-    public class IdImpulseEvent : UnityEvent<string,Vector3>
+    public class ImpulseEvent : UnityEvent<Vector3>
     {
     }
 
@@ -25,7 +25,7 @@ namespace Managers
                 Instance = this;
                 onExperienceStart = new UnityEvent();
                 OnHandActivation = new ActivateHandEvent();
-                onPieceDisconnected = new IdImpulseEvent();
+                onPieceDisconnected = new ImpulseEvent();
             }
             else
                 Destroy(gameObject);
@@ -37,6 +37,6 @@ namespace Managers
 
         public ActivateHandEvent OnHandActivation;
         public UnityEvent onExperienceStart;
-        public IdImpulseEvent onPieceDisconnected;
+        public ImpulseEvent onPieceDisconnected;
     }
 }
