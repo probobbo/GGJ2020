@@ -20,12 +20,6 @@ public class RoboHand : MonoBehaviour
         Rb = GetComponent<Rigidbody>();
         remainingUsages = usages;
         _roboHandController = GetComponentInParent<RoboHandController>();
-        
-        EventManager.Instance.OnHandActivation.AddListener(hand =>
-        {
-            if (_roboHandController.controller == hand)
-                ActivateHand();
-        });
     }
 
     public virtual void ActivateHand()

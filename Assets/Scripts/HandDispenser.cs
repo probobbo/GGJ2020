@@ -11,6 +11,7 @@ public class HandDispenser : MonoBehaviour
 {
     private bool _changingHand;
     private Coroutine _handSwitchCoroutine;
+    private Coroutine _unfillCoroutine;
 
     [SerializeField] private Image circle;
     [SerializeField] private float fillTime;
@@ -40,6 +41,8 @@ public class HandDispenser : MonoBehaviour
 
     private IEnumerator Fill(RoboHandController hand)
     {
+        if (_unfillCoroutine != null)
+            StopCoroutine(_unfillCoroutine);
         yield return circle.DOFillAmount(1, fillTime).SetEase(easeType)
             .OnUpdate(()=> AudioManager.SetParameterToInstance(_eventInstance	,"FillAmount",circle.fillAmount))
             .WaitForCompletion();
@@ -62,7 +65,8 @@ public class HandDispenser : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         AudioManager.StopAudio(_eventInstance);
-        StopCoroutine(_handSwitchCoroutine);
-        StartCoroutine(UnFill());
+        if (_handSwitchCoroutine != null)
+            StopCoroutine(_handSwitchCoroutine);
+        _unfillCoroutine = StartCoroutine(UnFill());
     }
 }

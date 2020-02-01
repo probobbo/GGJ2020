@@ -33,9 +33,11 @@ namespace Managers
 
         private void Update()
         {
-            if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+            if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) ||
+                Input.GetKeyDown(KeyCode.A))
                 EventManager.Instance.OnHandActivation.Invoke(OVRInput.Controller.LTouch);
-            if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
+            if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) ||
+                Input.GetKeyDown(KeyCode.D))
                 EventManager.Instance.OnHandActivation.Invoke(OVRInput.Controller.RTouch);
         }
         

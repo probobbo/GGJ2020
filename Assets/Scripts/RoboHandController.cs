@@ -35,6 +35,12 @@ public class RoboHandController : MonoBehaviour
 
         _defaultHand = ActiveHand;*/
         //ActiveHand.gameObject.SetActive(true);
+        
+        EventManager.Instance.OnHandActivation.AddListener(hand =>
+        {
+            if (controller == hand)
+                ActiveHand.ActivateHand();
+        });
     }
 
     public void ChangeRoboHand()
@@ -66,14 +72,19 @@ public class RoboHandController : MonoBehaviour
     private void Update()
     {
         if (controller == OVRInput.Controller.RTouch && OVRInput.GetDown(OVRInput.Button.One) ||
-            controller == OVRInput.Controller.LTouch && OVRInput.GetDown(OVRInput.Button.Three))
+            controller == OVRInput.Controller.LTouch && OVRInput.GetDown(OVRInput.Button.Three) ||
+            Input.GetKeyDown(KeyCode.Z))
             SetDefaultHand();
     }
 
     public void SetDefaultHand()
     {
-        ActiveHand.gameObject.SetActive(false);
-        ActiveHand.ResetHand();
+        if (ActiveHand != null)
+        {
+            ActiveHand.gameObject.SetActive(false);
+            ActiveHand.ResetHand();
+        }
+
         HasHand = false;
         /*
         ActiveHand = _defaultHand;
