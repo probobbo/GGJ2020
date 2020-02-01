@@ -47,7 +47,7 @@ MonoBehaviour:
   usages: 6
   firePoint: {fileID: 4965398153217236267}
   bullet: {fileID: 4145420103267134990, guid: 85c68ac4057cdfe4f83dc0c598356cb3, type: 3}
-  bulletSpeed: 800
+  bulletSpeed: 900
 --- !u!1001 &1612035822458388274
 PrefabInstance:
   m_ObjectHideFlags: 0
