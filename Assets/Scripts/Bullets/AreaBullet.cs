@@ -2,10 +2,9 @@
 using Statue;
 using UnityEngine;
 
-public class AreaBullet : GenericBullet
+public class AreaBullet : Bullet
 {
     public float area = 2f;
-
     protected override void CollideWithThings(Collision other)
     {
         var collisions = Physics.OverlapSphere(transform.position, area);
@@ -17,5 +16,6 @@ public class AreaBullet : GenericBullet
             var impulse = Vector3.Distance(collision.transform.position,transform.position);
             statuePiece.ApplyForce(direction * (strength / impulse));
         }
+        base.CollideWithThings(other);
     }
 }
