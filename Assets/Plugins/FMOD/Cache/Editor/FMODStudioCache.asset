@@ -17,6 +17,24 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-8172766277348372352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_RoboHandjob/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637161679048126127
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-6628800092091989667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,7 +102,11 @@ MonoBehaviour:
   Path: snapshot:/Main
   guid: 4124a9925e74fd4a914a28b0bba9cb03
   Banks:
+<<<<<<< HEAD
   - {fileID: -2609636911643945522}
+=======
+  - {fileID: -8172766277348372352}
+>>>>>>> master
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -144,7 +166,7 @@ MonoBehaviour:
   lastModified: 637161678798442694
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-240692737759825537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +215,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5294347209600267508}
+<<<<<<< HEAD
   - {fileID: -2609636911643945522}
+=======
+  - {fileID: -8172766277348372352}
+>>>>>>> master
   EditorEvents:
   - {fileID: -694444282964190563}
   - {fileID: 8150900470625687846}
@@ -203,10 +229,17 @@ MonoBehaviour:
   - {fileID: 2587768955574086922}
   EditorParameters: []
   MasterBanks:
+<<<<<<< HEAD
   - {fileID: -2609636911643945522}
   StringsBanks:
   - {fileID: 5294347209600267508}
   stringsBankWriteTime: 637161675174142816
+=======
+  - {fileID: -8172766277348372352}
+  StringsBanks:
+  - {fileID: 5294347209600267508}
+  stringsBankWriteTime: 637161679048136095
+>>>>>>> master
   cacheVersion: 3
 --- !u!114 &581049891502829788
 MonoBehaviour:
@@ -260,7 +293,7 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
---- !u!114 &1475758649633619940
+--- !u!114 &1444928220845833962
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -277,6 +310,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &1475758649633619940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX_DispencerComplete/FillAmount
+  m_EditorClassIdentifier: 
+  Name: FillAmount
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &1905524850282789017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,7 +376,11 @@ MonoBehaviour:
   Path: event:/AMBIENCE/AMB_Menu
   guid: f402fbf6fcc14b4090a0727bae843e1f
   Banks:
+<<<<<<< HEAD
   - {fileID: -2609636911643945522}
+=======
+  - {fileID: -8172766277348372352}
+>>>>>>> master
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -349,12 +403,20 @@ MonoBehaviour:
   Path: event:/SOUNDFX/SFX_DispencerComplete
   guid: 4bdc9c4de027804f8db329e21bd3fae0
   Banks:
+<<<<<<< HEAD
   - {fileID: -2609636911643945522}
+=======
+  - {fileID: -8172766277348372352}
+>>>>>>> master
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
+<<<<<<< HEAD
   - {fileID: 7177259223657573976}
+=======
+  - {fileID: 1444928220845833962}
+>>>>>>> master
   MinDistance: 0
   MaxDistance: 0
   Length: 1319
@@ -373,7 +435,11 @@ MonoBehaviour:
   Path: event:/MUSIC/SFX_Menu
   guid: cc087597e7f3ef4dbfb7346f2cb07d64
   Banks:
+<<<<<<< HEAD
   - {fileID: -2609636911643945522}
+=======
+  - {fileID: -8172766277348372352}
+>>>>>>> master
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -450,12 +516,20 @@ MonoBehaviour:
   Path: event:/SOUNDFX/SFX_DispencerFiller
   guid: d4ffa1b397e0ee4e90fd6483e26e5d65
   Banks:
+<<<<<<< HEAD
   - {fileID: -2609636911643945522}
+=======
+  - {fileID: -8172766277348372352}
+>>>>>>> master
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
+<<<<<<< HEAD
   - {fileID: 7398453305633747735}
+=======
+  - {fileID: 4239108585739373788}
+>>>>>>> master
   MinDistance: 0
   MaxDistance: 0
   Length: 100
@@ -476,6 +550,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &4239108585739373788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX_DispencerFiller/FillAmount
+  m_EditorClassIdentifier: 
+  Name: FillAmount
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &4859491648564919531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,7 +599,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_RoboHandjob/Build/Desktop/Master.strings.bank
   SubDir: 
+<<<<<<< HEAD
   lastModified: 637161675174142816
+=======
+  lastModified: 637161679048136095
+>>>>>>> master
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -550,7 +645,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &6779978453995666513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,7 +748,11 @@ MonoBehaviour:
   Path: event:/SOUNDFX/SFX_Test
   guid: 4bf3d5da6723404eb4c09c435035806d
   Banks:
+<<<<<<< HEAD
   - {fileID: -2609636911643945522}
+=======
+  - {fileID: -8172766277348372352}
+>>>>>>> master
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
