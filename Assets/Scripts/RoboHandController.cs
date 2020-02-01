@@ -63,6 +63,13 @@ public class RoboHandController : MonoBehaviour
         Debug.Log($"new hand type {ActiveHand.roboHandType}");
     }
 
+    private void Update()
+    {
+        if (controller == OVRInput.Controller.RTouch && OVRInput.GetDown(OVRInput.Button.One) ||
+            controller == OVRInput.Controller.LTouch && OVRInput.GetDown(OVRInput.Button.Three))
+            SetDefaultHand();
+    }
+
     public void SetDefaultHand()
     {
         ActiveHand.gameObject.SetActive(false);

@@ -307,6 +307,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5741a0c4f105bff45bcbd227712f116a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  circle: {fileID: 0}
+  fillTime: 0
+  easeType: 0
 --- !u!1 &1560302151
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,11 +689,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 614001052003252541, guid: ac3b1277050628e478ea5836fbcffdd0,
-        type: 3}
-      propertyPath: _trackingOriginType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 614001052012956891, guid: ac3b1277050628e478ea5836fbcffdd0,
         type: 3}
       propertyPath: m_Name
