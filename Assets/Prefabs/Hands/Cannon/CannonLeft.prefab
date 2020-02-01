@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e021dcc83e1cf334c9369d88631b8bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roboHandType: 0
+  roboHandType: 4
   strength: 1
   usages: 1
   firePoint: {fileID: 7618139924254359428}
