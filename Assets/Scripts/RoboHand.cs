@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Hands;
 using Managers;
 using Statue;
 using UnityEngine;
@@ -14,9 +15,12 @@ public class RoboHand : MonoBehaviour
 
     protected Rigidbody Rb;
     protected RoboHandController _roboHandController;
+    protected VelocityEstimator _velocityEstimator;
 
     protected virtual void Start()
     {
+        _velocityEstimator = GetComponentInParent<VelocityEstimator>();
+        _velocityEstimator.BeginEstimatingVelocity();
         Rb = GetComponent<Rigidbody>();
         remainingUsages = usages;
         _roboHandController = GetComponentInParent<RoboHandController>();
@@ -36,14 +40,16 @@ public class RoboHand : MonoBehaviour
         var statuePiece = other.gameObject.GetComponent<StatuePiece>();
         if (statuePiece == null) return;
 
+        var vel = _velocityEstimator.GetVelocityEstimate();
         if (!statuePiece.IsOnTheFloor)
         {
-            var impulse = new Vector3(other.impulse.x, 1f, other.impulse.z);
+            var impulse = new Vector3(vel.x, 1f, vel.z);
             statuePiece.ApplyForce(impulse * strength);
         }
         else
         {
-            statuePiece.ApplyForce(other.impulse * strength);
+            Debug.Log(vel * strength);
+            statuePiece.ApplyForce(vel * strength);
         }
     }
 

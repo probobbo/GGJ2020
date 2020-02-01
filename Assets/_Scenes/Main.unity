@@ -98,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: c5ef42ccb39a2be4f8ef09b70cf46204,
+  m_LightingDataAsset: {fileID: 112000000, guid: 0eab9600fb10000000cb9600fb100000,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -879,6 +879,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7140018607563898671, guid: ac3b1277050628e478ea5836fbcffdd0,
+        type: 3}
+      propertyPath: estimateOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7581090615593568104, guid: ac3b1277050628e478ea5836fbcffdd0,
+        type: 3}
+      propertyPath: strength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7581090615593568104, guid: ac3b1277050628e478ea5836fbcffdd0,
+        type: 3}
+      propertyPath: batStrength
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac3b1277050628e478ea5836fbcffdd0, type: 3}

@@ -106,6 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 614001052013043187}
   - component: {fileID: 7408099629147271314}
+  - component: {fileID: 5291198223811425935}
   m_Layer: 0
   m_Name: RightHandAnchor
   m_TagString: Untagged
@@ -128,7 +129,7 @@ Transform:
   - {fileID: 5885466489997677018}
   - {fileID: 4694284232850739683}
   - {fileID: 6254566148782130794}
-  - {fileID: 8681713711484320694}
+  - {fileID: 974799896362652804}
   - {fileID: 5912055810774320027}
   m_Father: {fileID: 614001052013053581}
   m_RootOrder: 5
@@ -146,6 +147,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: 2
+--- !u!114 &5291198223811425935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614001052012857221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9649c4a754392b84b9f2cfd82f885960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocityAverageFrames: 5
+  angularVelocityAverageFrames: 11
+  estimateOnAwake: 0
 --- !u!1 &614001052012895869
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,6 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 614001052013039005}
   - component: {fileID: 5141481386811259759}
+  - component: {fileID: 5451620728040326841}
   m_Layer: 0
   m_Name: LeftHandAnchor
   m_TagString: Untagged
@@ -196,6 +213,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: 1
+--- !u!114 &5451620728040326841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614001052012895869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9649c4a754392b84b9f2cfd82f885960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocityAverageFrames: 5
+  angularVelocityAverageFrames: 11
+  estimateOnAwake: 0
 --- !u!1 &614001052012956881
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,6 +968,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CannonLeft Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4558192802165521809, guid: 763c5eb342f26f1409bede3e1b65882c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5385601450748465827, guid: 763c5eb342f26f1409bede3e1b65882c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -993,9 +1030,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 763c5eb342f26f1409bede3e1b65882c, type: 3}
---- !u!4 &8681713711484320694 stripped
+--- !u!4 &974799896362652804 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5385601450748465827, guid: 763c5eb342f26f1409bede3e1b65882c,
+  m_CorrespondingSourceObject: {fileID: 4558192802165521809, guid: 763c5eb342f26f1409bede3e1b65882c,
     type: 3}
   m_PrefabInstance: {fileID: 3658852966793341205}
   m_PrefabAsset: {fileID: 0}

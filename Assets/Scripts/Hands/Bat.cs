@@ -25,6 +25,7 @@ public class Bat : RoboHand
 
     protected override void OnCollisionEnter(Collision other)
     {
+        Debug.Log("colliso");
         base.OnCollisionEnter(other);
         var statuePiece = other.gameObject.GetComponent<StatuePiece>();
         if (statuePiece == null) return;

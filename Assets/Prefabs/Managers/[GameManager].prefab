@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884cbcd34b3e7aa418a9f30b76cf3c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeToSwitchHand: 2
+  crumbleDelay: 3
