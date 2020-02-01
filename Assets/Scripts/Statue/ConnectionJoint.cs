@@ -1,40 +1,45 @@
 ﻿using System;
+using Managers;
 using UnityEngine;
 
 namespace Statue
 {
-    [RequireComponent(typeof(Rigidbody))]
     public class ConnectionJoint : MonoBehaviour
     {
-        private StatuePiece _parentPiece;
-        
+        [SerializeField] private GameObject objectToActivate;
+        public bool isFixed;
+        [SerializeField] private GameManager.Connection myConnection;
+
         private void Awake()
         {
-            var parent = transform.parent;
-            if (parent == null || parent.GetComponent<StatuePiece>()==null)
-                Destroy(gameObject);
-            _parentPiece = parent.GetComponent<StatuePiece>();
+            if (objectToActivate != null)
+                objectToActivate.SetActive(false);
         }
 
-        private bool IsParentConnected()
+        public GameManager.Connection GetConnection()
         {
-            return _parentPiece.IsPieceConnected();
+            return myConnection;
         }
 
-        private void ConnectToParent(Transform parent,string id)
+        public void ShowObject()
         {
-            _parentPiece.ConnectObject(parent,id);
-        } 
+            if (objectToActivate != null)
+            {
+                objectToActivate.SetActive(true);
+                gameObject.SetActive(false);
+            }
+        }
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Joint"))
             {
                 var otherJoint = other.GetComponent<ConnectionJoint>();
-                if (otherJoint != null && IsParentConnected() && !otherJoint.IsParentConnected())
+                if (otherJoint != null && otherJoint.isFixed && otherJoint.GetConnection() == myConnection)
                 {
-                    otherJoint.ConnectToParent(_parentPiece.transform,_parentPiece.GetId()+_parentPiece.GetConnectedCount());
-                    _parentPiece.UpdateConnections();
+                    Debug.Log("ITS GOING");
+                    otherJoint.ShowObject();
+                    transform.parent.gameObject.SetActive(false);
                 }
             }
         }

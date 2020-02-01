@@ -12,63 +12,24 @@ namespace Statue
     {
         public bool IsOnTheFloor { get; private set; }
 
-        [SerializeField] private bool connected;
-        private string _id;
-        private int _connectedPieces;
-
         private Rigidbody _rb;
         private OVRGrabbable _grabbable;
 
-        private List<ConnectionJoint> _joints;
+        private ConnectionJoint _joint; 
 
         //initialize joint list and destroy object if none are found
         private void Awake()
         {
             _grabbable = GetComponent<OVRGrabbable>();
-            _joints = new List<ConnectionJoint>();
-            for (var i = 0; i < transform.childCount; i++)
-            {
-                var child = transform.GetChild(i).GetComponent<ConnectionJoint>();
-                if (child != null)
-                {
-                    _joints.Add(child);
-                    child.gameObject.SetActive(false);
-                }
-            }
-
-            if (_joints.Count <= 0)
-                Destroy(gameObject);
-            _rb = GetComponent<Rigidbody>();
-            if (connected)
-            {
-                StopPhysics();
-                _id = "-";
-            }
-
-            _connectedPieces = 0;
-        }
-
-        private IEnumerator WaitAndActiveJoints()
-        {
-            if (!connected)
-                _rb.AddForce(3 * transform.right, ForceMode.Impulse);
-            yield return new WaitForSeconds(GameManager.Instance.crumbleDelay);
-            foreach (var joint in _joints)
-            {
-                joint.gameObject.SetActive(true);
-            }
-        }
-
-        private void Start()
-        {
-            StartCoroutine(WaitAndActiveJoints());
+           if(transform.childCount<=0)
+               Destroy(gameObject);
+           _joint = transform.GetChild(0).GetComponent<ConnectionJoint>();
+           if(_joint==null)
+               Destroy(gameObject);
         }
 
         public void ApplyForce(Vector3 impulse)
         {
-            if (IsPieceConnected())
-                EventManager.Instance.onPieceDisconnected.Invoke(_id,impulse);
-            else
                 _rb.AddForce(impulse,ForceMode.Impulse);
         }
 
@@ -87,67 +48,6 @@ namespace Statue
             if (other.gameObject.CompareTag("Floor"))
                 IsOnTheFloor = false;
         }
-
-        public bool IsPieceConnected()
-        {
-            return connected;
-        }
-
-        public void UpdateConnections()
-        {
-            _connectedPieces++;
-        }
-
-        public string GetConnectedCount()
-        {
-            return _connectedPieces + "";
-        }
-
-        public string GetId()
-        {
-            return _id;
-        }
-
-        public void ConnectObject(Transform parent, string id)
-        {
-            if (connected) return;
-            connected = true;
-            transform.parent = parent;
-            _id = id;
-            EventManager.Instance.onPieceDisconnected.AddListener(DisconnectObject);
-            StopPhysics();
-            
-            if (_grabbable.grabbedBy == null) return;
-            var grabber = _grabbable.grabbedBy.GetComponent<ClawGrabber>();
-            if (grabber != null)
-            {
-                grabber.ForceRelease(_grabbable);
-            }
-        }
-
-        public void StopPhysics()
-        {
-            _rb.velocity = Vector3.zero;
-            _rb.useGravity = false;
-            _rb.isKinematic = true;
-        }
-
-        public void ResetPhysics()
-        {
-            _rb.useGravity = true;
-            _rb.isKinematic = false;
-        }
-
-        public void DisconnectObject(string id, Vector3 impulse)
-        {
-            if (!connected || !_id.Contains(id)) return;
-            connected = false;
-            ResetPhysics();
-            transform.parent = null;
-            _connectedPieces = 0;
-            _rb.AddForce(impulse,ForceMode.Impulse);
-
-            EventManager.Instance.onPieceDisconnected.RemoveListener(DisconnectObject);
-        }
+        
     }
 }
