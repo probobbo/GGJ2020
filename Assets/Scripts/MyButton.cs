@@ -5,7 +5,7 @@ using FMODUnity;
 using Managers;
 using UnityEngine;
 
-public class BeginButton : MonoBehaviour
+public class MyButton : MonoBehaviour
 {
     [SerializeField] [EventRef] private string sfx;
 
