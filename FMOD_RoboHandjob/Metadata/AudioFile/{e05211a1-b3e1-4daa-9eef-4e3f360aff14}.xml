@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{e05211a1-b3e1-4daa-9eef-4e3f360aff14}">
+		<property name="assetPath">
+			<value>RazorLoop.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>14.651791666666666</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5fa04e7b-8242-49c6-abd8-632176b86739}</destination>
+		</relationship>
+	</object>
+</objects>

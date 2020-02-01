@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{298d5c56-64c5-46c6-af99-8e4f6990d19c}">
+		<property name="assetPath">
+			<value>185515__soneproject__air-compressor-valve.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.53791383219954647</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5fa04e7b-8242-49c6-abd8-632176b86739}</destination>
+		</relationship>
+	</object>
+</objects>
