@@ -885,16 +885,6 @@ PrefabInstance:
       propertyPath: estimateOnAwake
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7581090615593568104, guid: ac3b1277050628e478ea5836fbcffdd0,
-        type: 3}
-      propertyPath: strength
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7581090615593568104, guid: ac3b1277050628e478ea5836fbcffdd0,
-        type: 3}
-      propertyPath: batStrength
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac3b1277050628e478ea5836fbcffdd0, type: 3}
 --- !u!1001 &1578807563

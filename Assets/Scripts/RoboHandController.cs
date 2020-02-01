@@ -9,12 +9,14 @@ using Random = UnityEngine.Random;
 public class RoboHandController : MonoBehaviour
 {
     public OVRInput.Controller controller;
-    
+
     private RoboHand[] _roboHands;
+
     public RoboHand ActiveHand { get; private set; }
+
     //private RoboHand _defaultHand;
     public bool HasHand { get; private set; }
-    
+
     private IEnumerator Start()
     {
         _roboHands = GetComponentsInChildren<RoboHand>(true);
@@ -35,16 +37,11 @@ public class RoboHandController : MonoBehaviour
 
         _defaultHand = ActiveHand;*/
         //ActiveHand.gameObject.SetActive(true);
-        
-        EventManager.Instance.OnHandActivation.AddListener(hand =>
-        {
-            if (controller == hand)
-                ActiveHand.ActivateHand();
-        });
     }
 
     public void ChangeRoboHand()
     {
+        EventManager.Instance.OnHandActivation.RemoveListener(ActivateHand);
         if (ActiveHand == null)
         {
             var randomu = Random.Range(0, _roboHands.Length);
@@ -67,7 +64,15 @@ public class RoboHandController : MonoBehaviour
         HasHand = true;
         ActiveHand.gameObject.SetActive(true);
         Debug.Log($"new hand type {ActiveHand.roboHandType}");
+        EventManager.Instance.OnHandActivation.AddListener(ActivateHand);
     }
+
+    private void ActivateHand(OVRInput.Controller hand)
+    {
+        if (ActiveHand != null && controller == hand)
+            ActiveHand.ActivateHand();
+    }
+
 
     private void Update()
     {
