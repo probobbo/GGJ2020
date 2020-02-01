@@ -22,7 +22,6 @@ public class BeginButton : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("GameController")) return;
         if (_alreadyTriggered) return;
         _alreadyTriggered = true;
         
