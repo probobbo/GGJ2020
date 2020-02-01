@@ -86,6 +86,7 @@ public class RoboHandController : MonoBehaviour
     {
         if (ActiveHand != null)
         {
+            EventManager.Instance.OnHandActivation.RemoveListener(ActivateHand);
             ActiveHand.gameObject.SetActive(false);
             ActiveHand.ResetHand();
         }

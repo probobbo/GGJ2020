@@ -17,12 +17,14 @@ namespace Statue
         private int _connectedPieces;
 
         private Rigidbody _rb;
+        private OVRGrabbable _grabbable;
 
         private List<ConnectionJoint> _joints;
 
         //initialize joint list and destroy object if none are found
         private void Awake()
         {
+            _grabbable = GetComponent<OVRGrabbable>();
             _joints = new List<ConnectionJoint>();
             for (var i = 0; i < transform.childCount; i++)
             {
@@ -114,6 +116,13 @@ namespace Statue
             _id = id;
             EventManager.Instance.onPieceDisconnected.AddListener(DisconnectObject);
             StopPhysics();
+            
+            if (_grabbable.grabbedBy == null) return;
+            var grabber = _grabbable.grabbedBy.GetComponent<ClawGrabber>();
+            if (grabber != null)
+            {
+                grabber.ForceRelease(_grabbable);
+            }
         }
 
         public void StopPhysics()
