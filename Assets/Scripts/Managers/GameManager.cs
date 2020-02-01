@@ -21,6 +21,12 @@ namespace Managers
         }
         #endregion
 
+        private void Start()
+        {
+            OVRManager.fixedFoveatedRenderingLevel = OVRManager.FixedFoveatedRenderingLevel.High;
+            Application.targetFrameRate = 72;
+        }
+
         private void Update()
         {
             if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
