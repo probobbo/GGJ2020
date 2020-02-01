@@ -37,9 +37,8 @@ public class RoboHandController : MonoBehaviour
         //ActiveHand.gameObject.SetActive(true);
     }
 
-    public IEnumerator ChangeRoboHand()
+    public void ChangeRoboHand()
     {
-        yield return new WaitForSeconds(GameManager.Instance.TimeToSwitchHand);
         if (ActiveHand == null)
         {
             var randomu = Random.Range(0, _roboHands.Length);
