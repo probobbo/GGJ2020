@@ -1,21 +1,32 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
 
-public class GameManager : MonoBehaviour
+namespace Managers
 {
-    #region Singleton
-    public static GameManager Instance;
-
-    private void Awake()
+    public class GameManager : MonoBehaviour
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
-        
-        DontDestroyOnLoad(this);
+        #region Singleton
+        public static GameManager Instance;
+
+        private void Awake()
+        {
+            if (Instance == null)
+                Instance = this;
+            else
+                Destroy(gameObject);
+
+            DontDestroyOnLoad(this);
+        }
+        #endregion
+
+        private void Update()
+        {
+            if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+                EventManager.Instance.OnHandActivation.Invoke(OVRInput.Controller.LTouch);
+            if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
+                EventManager.Instance.OnHandActivation.Invoke(OVRInput.Controller.RTouch);
+        }
     }
-    #endregion
 }
