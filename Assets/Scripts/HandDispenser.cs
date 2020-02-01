@@ -5,19 +5,26 @@ using UnityEngine;
 
 public class HandDispenser : MonoBehaviour
 {
-    private bool _alreadyChanged;
+    private bool _changingHand;
+    private Coroutine _handSwitchCoroutine;
     
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("GameController") || _alreadyChanged) return;
-
-        _alreadyChanged = true;
         var hand = other.transform.parent.GetComponentInParent<RoboHandController>();
-        hand.ChangeRoboHand();
+        if (hand == null) return;
+        if (hand.HasHand) return;
+
+        _changingHand = true;
+        _handSwitchCoroutine = StartCoroutine(hand.ChangeRoboHand());
     }
 
     private void OnTriggerExit(Collider other)
     {
-        _alreadyChanged = false;
+        if (_handSwitchCoroutine != null)
+        {
+            StopCoroutine(_handSwitchCoroutine);
+        }
+
+        _changingHand = false;
     }
 }

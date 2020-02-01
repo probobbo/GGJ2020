@@ -10,6 +10,7 @@ namespace Managers
     {
         #region Singleton
         public static GameManager Instance;
+        public float TimeToSwitchHand = 2f;
         private OVRScreenFade _screenFade;
 
         private void Awake()
@@ -52,6 +53,4 @@ namespace Managers
             SceneManager.LoadScene(id);
         }
     }
-    
-    
 }
