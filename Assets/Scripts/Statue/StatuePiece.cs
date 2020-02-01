@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Managers;
 using UnityEngine;
@@ -10,7 +11,7 @@ namespace Statue
     public class StatuePiece : MonoBehaviour
     {
         public bool IsOnTheFloor { get; private set; }
-        
+
         [SerializeField] private bool connected;
         private string _id;
         private int _connectedPieces;
@@ -29,6 +30,7 @@ namespace Statue
                 if (child != null)
                 {
                     _joints.Add(child);
+                    child.gameObject.SetActive(false);
                 }
             }
 
@@ -44,8 +46,20 @@ namespace Statue
             _connectedPieces = 0;
         }
 
+        private IEnumerator WaitAndActiveJoints()
+        {
+            if (!connected)
+                _rb.AddForce(3 * transform.right, ForceMode.Impulse);
+            yield return new WaitForSeconds(GameManager.Instance.crumbleDelay);
+            foreach (var joint in _joints)
+            {
+                joint.gameObject.SetActive(true);
+            }
+        }
+
         private void Start()
         {
+            StartCoroutine(WaitAndActiveJoints());
         }
 
         public void ApplyForce(Vector3 impulse)
@@ -57,8 +71,8 @@ namespace Statue
         {
             if (other.gameObject.CompareTag("Floor"))
                 IsOnTheFloor = true;
-            
-            if(!other.transform.CompareTag("GameController") || !connected)
+
+            if (!other.transform.CompareTag("GameController") || !connected)
                 return;
             EventManager.Instance.onPieceDisconnected.Invoke(_id);
         }
