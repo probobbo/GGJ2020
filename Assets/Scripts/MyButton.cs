@@ -5,7 +5,7 @@ using FMODUnity;
 using Managers;
 using UnityEngine;
 
-public class BeginButton : MonoBehaviour
+public class MyButton : MonoBehaviour
 {
     [SerializeField] [EventRef] private string sfx;
 
@@ -22,7 +22,6 @@ public class BeginButton : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("GameController")) return;
         if (_alreadyTriggered) return;
         _alreadyTriggered = true;
         

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8189118939652374694
+--- !u!114 &-8670379862084538086
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,67 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_DispencerFiller/FillAmount
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/SFX_Test
   m_EditorClassIdentifier: 
-  Name: FillAmount
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-8172766277348372352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD_RoboHandjob/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637161679048126127
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-6628800092091989667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_DispencerFiller/FillAmount
-  m_EditorClassIdentifier: 
-  Name: FillAmount
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-4403701661522349957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_DispencerComplete/FillAmount
-  m_EditorClassIdentifier: 
-  Name: FillAmount
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-694444282964190563
+  Path: event:/SOUNDFX/SFX_Test
+  guid: 4bf3d5da6723404eb4c09c435035806d
+  Banks:
+  - {fileID: 2525677823925418311}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2127
+--- !u!114 &-7734491926300383152
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,7 +38,7 @@ MonoBehaviour:
   Path: snapshot:/Main
   guid: 4124a9925e74fd4a914a28b0bba9cb03
   Banks:
-  - {fileID: -8172766277348372352}
+  - {fileID: 2525677823925418311}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -92,7 +46,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-547322882588355720
+--- !u!114 &-2888682361492462973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,16 +55,69 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/SFX_DispencerFiller
   m_EditorClassIdentifier: 
-  Path: FMOD_RoboHandjob/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637161661491288711
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-542833272222019898
+  Path: event:/SOUNDFX/SFX_DispencerFiller
+  guid: d4ffa1b397e0ee4e90fd6483e26e5d65
+  Banks:
+  - {fileID: 2525677823925418311}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1057375980585631922}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 100
+--- !u!114 &-1881599604988405046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AMBIENCE/AMB_Menu
+  m_EditorClassIdentifier: 
+  Path: event:/AMBIENCE/AMB_Menu
+  guid: f402fbf6fcc14b4090a0727bae843e1f
+  Banks:
+  - {fileID: 2525677823925418311}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 66861
+--- !u!114 &-1348410137854521327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/SFX_DispencerComplete
+  m_EditorClassIdentifier: 
+  Path: event:/SOUNDFX/SFX_DispencerComplete
+  guid: 4bdc9c4de027804f8db329e21bd3fae0
+  Banks:
+  - {fileID: 2525677823925418311}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7174538505993867202}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1319
+--- !u!114 &-1057375980585631922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,8 +133,37 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 0
---- !u!114 &-270430212295566763
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 3519945994645428749}
+  - {fileID: 2525677823925418311}
+  EditorEvents:
+  - {fileID: -7734491926300383152}
+  - {fileID: -1348410137854521327}
+  - {fileID: -8670379862084538086}
+  - {fileID: 5601355355030548716}
+  - {fileID: -2888682361492462973}
+  - {fileID: -1881599604988405046}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 2525677823925418311}
+  StringsBanks:
+  - {fileID: 3519945994645428749}
+  stringsBankWriteTime: 637161678798452663
+  cacheVersion: 3
+--- !u!114 &2525677823925418311
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,88 +180,8 @@ MonoBehaviour:
   lastModified: 637161678798442694
   LoadResult: 0
   FileSizes: []
-  Exists: 0
---- !u!114 &-240692737759825537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_DispencerFiller/FillAmount
-  m_EditorClassIdentifier: 
-  Name: FillAmount
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-40647446274955922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_DispencerFiller/FillAmount
-  m_EditorClassIdentifier: 
-  Name: FillAmount
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 5294347209600267508}
-  - {fileID: -8172766277348372352}
-  EditorEvents:
-  - {fileID: -694444282964190563}
-  - {fileID: 8150900470625687846}
-  - {fileID: 2646701252399008799}
-  - {fileID: 2538770937888798203}
-  - {fileID: 4047527314506973258}
-  - {fileID: 2587768955574086922}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: -8172766277348372352}
-  StringsBanks:
-  - {fileID: 5294347209600267508}
-  stringsBankWriteTime: 637161679048136095
-  cacheVersion: 3
---- !u!114 &581049891502829788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_DispencerFiller/FillAmount
-  m_EditorClassIdentifier: 
-  Name: FillAmount
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &886155711132798919
+  Exists: 1
+--- !u!114 &3519945994645428749
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,147 +191,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: FMOD_RoboHandjob/Build/Desktop/Master.bank
+  Path: FMOD_RoboHandjob/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637161670527686852
+  lastModified: 637161678798452663
   LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &1366740354553740946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_DispencerComplete/FillAmount
-  m_EditorClassIdentifier: 
-  Name: FillAmount
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &1444928220845833962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_DispencerComplete/FillAmount
-  m_EditorClassIdentifier: 
-  Name: FillAmount
-  Min: 0
-  Max: 1
-  Default: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1052
+  - Name: Mobile
+    Value: 1052
   Exists: 1
---- !u!114 &1475758649633619940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_DispencerComplete/FillAmount
-  m_EditorClassIdentifier: 
-  Name: FillAmount
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &1905524850282789017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_DispencerComplete/FillAmount
-  m_EditorClassIdentifier: 
-  Name: FillAmount
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &2307430625044635900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_DispencerFiller/FillAmount
-  m_EditorClassIdentifier: 
-  Name: FillAmount
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &2538770937888798203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/AMBIENCE/AMB_Menu
-  m_EditorClassIdentifier: 
-  Path: event:/AMBIENCE/AMB_Menu
-  guid: f402fbf6fcc14b4090a0727bae843e1f
-  Banks:
-  - {fileID: -8172766277348372352}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 66861
---- !u!114 &2587768955574086922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SOUNDFX/SFX_DispencerComplete
-  m_EditorClassIdentifier: 
-  Path: event:/SOUNDFX/SFX_DispencerComplete
-  guid: 4bdc9c4de027804f8db329e21bd3fae0
-  Banks:
-  - {fileID: -8172766277348372352}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 1444928220845833962}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1319
---- !u!114 &2646701252399008799
+--- !u!114 &5601355355030548716
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -390,7 +218,7 @@ MonoBehaviour:
   Path: event:/MUSIC/SFX_Menu
   guid: cc087597e7f3ef4dbfb7346f2cb07d64
   Banks:
-  - {fileID: -8172766277348372352}
+  - {fileID: 2525677823925418311}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -398,159 +226,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 181040
---- !u!114 &3389682529952720297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD_RoboHandjob/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637161671023883358
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &3500752507174229038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD_RoboHandjob/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637161666253818678
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &3647707725128282025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD_RoboHandjob/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637161666800418895
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &4047527314506973258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SOUNDFX/SFX_DispencerFiller
-  m_EditorClassIdentifier: 
-  Path: event:/SOUNDFX/SFX_DispencerFiller
-  guid: d4ffa1b397e0ee4e90fd6483e26e5d65
-  Banks:
-  - {fileID: -8172766277348372352}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 4239108585739373788}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 100
---- !u!114 &4167041086540135919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_DispencerFiller/FillAmount
-  m_EditorClassIdentifier: 
-  Name: FillAmount
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &4239108585739373788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_DispencerFiller/FillAmount
-  m_EditorClassIdentifier: 
-  Name: FillAmount
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &4859491648564919531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD_RoboHandjob/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637161669933742903
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &5294347209600267508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD_RoboHandjob/Build/Desktop/Master.strings.bank
-  SubDir: 
-  lastModified: 637161679048136095
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1052
-  - Name: Mobile
-    Value: 1052
-  Exists: 1
---- !u!114 &5744474970562749581
+--- !u!114 &6463851995734664041
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -568,7 +244,7 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
---- !u!114 &6040707811543004976
+--- !u!114 &6764635502087159015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -585,43 +261,7 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
---- !u!114 &6779978453995666513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD_RoboHandjob/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637161575126861566
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &6789458163441472068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD_RoboHandjob/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637161674544979210
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &7360803376065525297
+--- !u!114 &6946504634477834757
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -631,14 +271,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_DispencerFiller/FillAmount
+  m_Name: parameter:/SFX_DispencerComplete/FillAmount
   m_EditorClassIdentifier: 
   Name: FillAmount
   Min: 0
   Max: 1
   Default: 0
   Exists: 0
---- !u!114 &8150900470625687846
+--- !u!114 &7174538505993867202
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -647,35 +287,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SOUNDFX/SFX_Test
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX_DispencerComplete/FillAmount
   m_EditorClassIdentifier: 
-  Path: event:/SOUNDFX/SFX_Test
-  guid: 4bf3d5da6723404eb4c09c435035806d
-  Banks:
-  - {fileID: -8172766277348372352}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2127
---- !u!114 &8728945322239227194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD_RoboHandjob/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637161671534447433
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
+  Name: FillAmount
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
