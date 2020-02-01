@@ -1,26 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
-public class EventManager : MonoBehaviour
+namespace Managers
 {
-    #region Singleton
-    public static EventManager Instance;
-
-    private void Awake()
+    public class StringEvent : UnityEvent<string>
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            
-        }
-        else
-            Destroy(gameObject);
-        
-        DontDestroyOnLoad(this);
     }
-    #endregion
 
-    public UnityEvent OnExperienceStart;
+    public class EventManager : MonoBehaviour
+    {
+        #region Singleton
+
+        public static EventManager Instance;
+
+        private void Awake()
+        {
+            if (Instance == null)
+            {
+                Instance = this;
+                onExperienceStart = new UnityEvent();
+                onPieceDisconnected = new StringEvent();                
+            }
+            else
+                Destroy(gameObject);
+
+            DontDestroyOnLoad(this);
+        }
+
+        #endregion
+
+        public UnityEvent onExperienceStart;
+
+        public StringEvent onPieceDisconnected;
+    }
 }

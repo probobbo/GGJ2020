@@ -21,9 +21,9 @@ namespace Statue
             return _parentPiece.IsPieceConnected();
         }
 
-        private void ConnectToParent(Transform parent)
+        private void ConnectToParent(Transform parent,string id)
         {
-            _parentPiece.ConnectObject(parent);
+            _parentPiece.ConnectObject(parent,id);
         } 
 
         private void OnTriggerEnter(Collider other)
@@ -33,7 +33,8 @@ namespace Statue
                 var otherJoint = other.GetComponent<ConnectionJoint>();
                 if (otherJoint != null && IsParentConnected() && !otherJoint.IsParentConnected())
                 {
-                    otherJoint.ConnectToParent(_parentPiece.transform);
+                    otherJoint.ConnectToParent(_parentPiece.transform,_parentPiece.GetId()+_parentPiece.GetConnectedCount());
+                    _parentPiece.UpdateConnections();
                 }
             }
         }
