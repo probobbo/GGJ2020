@@ -24,7 +24,6 @@ public class Bat : RoboHand
         if (statuePiece == null) return;
         
         var vel = _velocityEstimator.GetVelocityEstimate();
-        Debug.Log("nigga collide " + vel);
         statuePiece.ApplyForce(vel * strength);
         if(_isActive)
             strength /= batStrength;
