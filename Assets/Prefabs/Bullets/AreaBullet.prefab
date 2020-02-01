@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5d5dcc770009b418e92b905d3e833c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 5
+  strength: 20
   area: 2
 --- !u!1001 &1975455225839396733
 PrefabInstance:
@@ -76,11 +76,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2735028895665989413, guid: 9766b9ef6dc5f6145a436fa71a8e79eb,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735028895665989413, guid: 9766b9ef6dc5f6145a436fa71a8e79eb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735028895665989413, guid: 9766b9ef6dc5f6145a436fa71a8e79eb,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 3956721993713564314, guid: 9766b9ef6dc5f6145a436fa71a8e79eb,
         type: 3}
       propertyPath: m_Name
       value: AreaBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 7941151628754260281, guid: 9766b9ef6dc5f6145a436fa71a8e79eb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b976b0418b81f148aff9597f44ed866, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9766b9ef6dc5f6145a436fa71a8e79eb, type: 3}
 --- !u!1 &3279504257767513575 stripped

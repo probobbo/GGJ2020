@@ -62,10 +62,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2982309841377702621, guid: cf61ffc4c99be8e43be7c2d87055ea95,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1351
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982309841377702621, guid: cf61ffc4c99be8e43be7c2d87055ea95,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0455
+      objectReference: {fileID: 0}
     - target: {fileID: 8601933803609633899, guid: cf61ffc4c99be8e43be7c2d87055ea95,
         type: 3}
       propertyPath: m_Name
-      value: PistolLeft
+      value: PistolLeft Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf61ffc4c99be8e43be7c2d87055ea95, type: 3}
