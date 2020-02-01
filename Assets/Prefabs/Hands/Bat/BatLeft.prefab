@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roboHandType: 1
-  strength: 5
+  strength: 10
   usages: 3
-  batStrength: 8
+  batStrength: 15
 --- !u!65 &8898708181227342991
 BoxCollider:
   m_ObjectHideFlags: 0
