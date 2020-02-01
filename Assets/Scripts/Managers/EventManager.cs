@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class EventManager : MonoBehaviour
 {
+    public class ActivateHandEvent : UnityEvent<OVRInput.Controller> {}
+    
     #region Singleton
     public static EventManager Instance;
 
@@ -14,6 +16,7 @@ public class EventManager : MonoBehaviour
         {
             Instance = this;
             
+            OnHandActivation = new ActivateHandEvent();
         }
         else
             Destroy(gameObject);
@@ -22,5 +25,6 @@ public class EventManager : MonoBehaviour
     }
     #endregion
 
+    public ActivateHandEvent OnHandActivation;
     public UnityEvent OnExperienceStart;
 }

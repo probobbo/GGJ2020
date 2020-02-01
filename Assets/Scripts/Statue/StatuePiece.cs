@@ -9,6 +9,7 @@ namespace Statue
     {
         [SerializeField]
         private bool connected;
+        public bool IsOnTheFloor { get; private set; }
 
         private Rigidbody _rb;
 
@@ -30,6 +31,23 @@ namespace Statue
             if (_joints.Count <= 0)
                 Destroy(gameObject);
             _rb = GetComponent<Rigidbody>();
+        }
+
+        public void ApplyForce(Vector3 impulse)
+        {
+            _rb.AddForce(impulse);
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.CompareTag("Floor"))
+                IsOnTheFloor = true;
+        }
+        
+        private void OnCollisionExit(Collision other)
+        {
+            if (other.gameObject.CompareTag("Floor"))
+                IsOnTheFloor = false;
         }
 
         public bool IsPieceConnected()
