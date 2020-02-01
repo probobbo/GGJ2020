@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Gun : RoboHand
 {
+    public override void ActivateHand()
+    {
     
+    }
 }
