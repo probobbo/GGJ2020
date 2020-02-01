@@ -304,6 +304,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb451026209a844190d56cd489133ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfx: event:/SOUNDFX/SFX_Test
+  sceneToLoad: 1
 --- !u!65 &173990844
 BoxCollider:
   m_ObjectHideFlags: 0
