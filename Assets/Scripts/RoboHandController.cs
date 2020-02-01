@@ -2,8 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Managers;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class RoboHandController : MonoBehaviour
@@ -12,7 +12,8 @@ public class RoboHandController : MonoBehaviour
     
     private RoboHand[] _roboHands;
     public RoboHand ActiveHand { get; private set; }
-    private RoboHand _defaultHand;
+    //private RoboHand _defaultHand;
+    public bool HasHand { get; private set; }
     
     private IEnumerator Start()
     {
@@ -22,7 +23,9 @@ public class RoboHandController : MonoBehaviour
         {
             roboHand.gameObject.SetActive(false);
         }
-        
+
+        HasHand = false;
+        /*
         ActiveHand = _roboHands.First(hand => hand.roboHandType == RoboHandType.Default);
         if (ActiveHand == null)
         {
@@ -30,21 +33,32 @@ public class RoboHandController : MonoBehaviour
             yield break;
         }
 
-        _defaultHand = ActiveHand;
-        ActiveHand.gameObject.SetActive(true);
+        _defaultHand = ActiveHand;*/
+        //ActiveHand.gameObject.SetActive(true);
     }
 
     public void ChangeRoboHand()
     {
-        ActiveHand.gameObject.SetActive(false);
-        var nextRoboHand = ActiveHand;
-        while (nextRoboHand.roboHandType == ActiveHand.roboHandType)
+        if (ActiveHand == null)
         {
             var randomu = Random.Range(0, _roboHands.Length);
-            nextRoboHand = _roboHands[randomu];
+            ActiveHand = _roboHands[randomu];
+        }
+        else
+        {
+            ActiveHand.gameObject.SetActive(false);
+
+            var nextRoboHand = ActiveHand;
+            while (nextRoboHand.roboHandType == ActiveHand.roboHandType)
+            {
+                var randomu = Random.Range(0, _roboHands.Length);
+                nextRoboHand = _roboHands[randomu];
+            }
+
+            ActiveHand = nextRoboHand;
         }
 
-        ActiveHand = nextRoboHand;
+        HasHand = true;
         ActiveHand.gameObject.SetActive(true);
         Debug.Log($"new hand type {ActiveHand.roboHandType}");
     }
@@ -52,7 +66,9 @@ public class RoboHandController : MonoBehaviour
     public void SetDefaultHand()
     {
         ActiveHand.gameObject.SetActive(false);
+        HasHand = false;
+        /*
         ActiveHand = _defaultHand;
-        ActiveHand.gameObject.SetActive(true);
+        ActiveHand.gameObject.SetActive(true);*/
     }
 }
