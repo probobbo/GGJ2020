@@ -11,7 +11,7 @@ public class Gun : RoboHand
     {
         var bull = Instantiate(bullet, firePoint.transform.position,firePoint.transform.rotation);
         bull.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
-        usages--;
+        remainingUsages--;
         base.ActivateHand();
     }
 }

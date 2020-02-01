@@ -73,6 +73,7 @@ public class RoboHandController : MonoBehaviour
     public void SetDefaultHand()
     {
         ActiveHand.gameObject.SetActive(false);
+        ActiveHand.ResetHand();
         HasHand = false;
         /*
         ActiveHand = _defaultHand;
