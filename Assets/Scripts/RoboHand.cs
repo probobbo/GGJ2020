@@ -10,6 +10,7 @@ public class RoboHand : MonoBehaviour
     public RoboHandType roboHandType;
     public float strength = 1f;
     public float usages = 1f;
+    protected float remainingUsages = 1f;
 
     protected Rigidbody Rb;
     private RoboHandController _roboHandController;
@@ -17,6 +18,7 @@ public class RoboHand : MonoBehaviour
     protected virtual void Start()
     {
         Rb = GetComponent<Rigidbody>();
+        remainingUsages = usages;
         _roboHandController = GetComponentInParent<RoboHandController>();
         
         EventManager.Instance.OnHandActivation.AddListener(hand =>
@@ -28,7 +30,7 @@ public class RoboHand : MonoBehaviour
 
     public virtual void ActivateHand()
     {
-        if (usages <= 0)
+        if (remainingUsages <= 0)
         {
             DetachHand();
             return;
@@ -48,5 +50,11 @@ public class RoboHand : MonoBehaviour
     public void DetachHand()
     {
         _roboHandController.SetDefaultHand();
+    }
+
+    public virtual void ResetHand()
+    {
+        //SE NECESSARIO QUI RIMETTI POSIZIONE
+        remainingUsages = usages;
     }
 }
