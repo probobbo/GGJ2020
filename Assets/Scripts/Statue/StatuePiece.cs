@@ -64,7 +64,10 @@ namespace Statue
 
         public void ApplyForce(Vector3 impulse)
         {
-            _rb.AddForce(impulse);
+            if (IsPieceConnected())
+                EventManager.Instance.onPieceDisconnected.Invoke(_id,impulse);
+            else
+                _rb.AddForce(impulse);
         }
 
         private void OnCollisionEnter(Collision other)
@@ -72,9 +75,9 @@ namespace Statue
             if (other.gameObject.CompareTag("Floor"))
                 IsOnTheFloor = true;
 
-            if (!other.transform.CompareTag("GameController") || !connected)
+            /*if (!other.transform.CompareTag("GameController") || !connected)
                 return;
-            EventManager.Instance.onPieceDisconnected.Invoke(_id);
+            EventManager.Instance.onPieceDisconnected.Invoke(_id);*/
         }
 
         private void OnCollisionExit(Collision other)
@@ -120,12 +123,21 @@ namespace Statue
             _rb.isKinematic = true;
         }
 
-        public void DisconnectObject(string id)
+        public void ResetPhysics()
+        {
+            _rb.useGravity = true;
+            _rb.isKinematic = false;
+        }
+
+        public void DisconnectObject(string id, Vector3 impulse)
         {
             if (!connected || !_id.Contains(id)) return;
             connected = false;
+            ResetPhysics();
             transform.parent = null;
             _connectedPieces = 0;
+            _rb.AddForce(impulse);
+
             EventManager.Instance.onPieceDisconnected.RemoveListener(DisconnectObject);
         }
     }
