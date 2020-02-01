@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Managers
 {
@@ -9,6 +10,7 @@ namespace Managers
     {
         #region Singleton
         public static GameManager Instance;
+        private OVRScreenFade _screenFade;
 
         private void Awake()
         {
@@ -21,6 +23,12 @@ namespace Managers
         }
         #endregion
 
+        private void Start()
+        {
+            OVRManager.fixedFoveatedRenderingLevel = OVRManager.FixedFoveatedRenderingLevel.High;
+            Application.targetFrameRate = 72;
+        }
+
         private void Update()
         {
             if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
@@ -28,5 +36,22 @@ namespace Managers
             if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
                 EventManager.Instance.OnHandActivation.Invoke(OVRInput.Controller.RTouch);
         }
+        
+        public void LoadScene(int id)
+        {
+            StartCoroutine(FadeAndLoadScene(id));
+        }
+        
+        
+        private IEnumerator FadeAndLoadScene(int id)
+        {
+            _screenFade = FindObjectOfType<OVRScreenFade>();
+            if (_screenFade == null) yield break;
+            _screenFade.FadeOut();
+            yield return new WaitForSeconds(_screenFade.fadeTime);
+            SceneManager.LoadScene(id);
+        }
     }
+    
+    
 }

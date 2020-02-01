@@ -37,11 +37,10 @@ public class RoboHandController : MonoBehaviour
     public void ChangeRoboHand()
     {
         ActiveHand.gameObject.SetActive(false);
-        int randomu;
         var nextRoboHand = ActiveHand;
         while (nextRoboHand.roboHandType == ActiveHand.roboHandType)
         {
-            randomu = Random.Range(0, _roboHands.Length);
+            var randomu = Random.Range(0, _roboHands.Length);
             nextRoboHand = _roboHands[randomu];
         }
 

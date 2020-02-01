@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using FMODUnity;
+using Managers;
 using UnityEngine;
 
 public class BeginButton : MonoBehaviour
 {
-    //[SerializeField] [EventRef] private string sfx;
+    [SerializeField] [EventRef] private string sfx;
+
+    [SerializeField] private int sceneToLoad;
     private bool _alreadyTriggered = false;
     private CanvasGroup _canvasGroup;
 
@@ -18,11 +22,13 @@ public class BeginButton : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Hand")) return;
+        if (!other.CompareTag("GameController")) return;
         if (_alreadyTriggered) return;
         _alreadyTriggered = true;
         
-        //AudioManager.PlayOneShotAudio(sfx, gameObject);
+        AudioManager.PlayOneShotAudio(sfx, gameObject);
+        GameManager.Instance.LoadScene(sceneToLoad);
         _canvasGroup.DOFade(0, 1f);
+        
     }
 }
