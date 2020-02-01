@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &6912687593348101971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6181012262368750442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9649c4a754392b84b9f2cfd82f885960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocityAverageFrames: 5
+  angularVelocityAverageFrames: 11
+  estimateOnAwake: 0
 --- !u!1001 &7805243022318688452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62,10 +77,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4476122351437311180, guid: df4683a3403a3834c94270599f6c74d0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8265225930651374203, guid: df4683a3403a3834c94270599f6c74d0,
         type: 3}
       propertyPath: m_Name
-      value: BatLeft
+      value: BatLeft Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582226975679500310, guid: df4683a3403a3834c94270599f6c74d0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df4683a3403a3834c94270599f6c74d0, type: 3}
+--- !u!1 &6181012262368750442 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4149669908381463470, guid: df4683a3403a3834c94270599f6c74d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 7805243022318688452}
+  m_PrefabAsset: {fileID: 0}
