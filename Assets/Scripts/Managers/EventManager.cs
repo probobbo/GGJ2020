@@ -4,6 +4,10 @@ using UnityEngine.Serialization;
 
 namespace Managers
 {
+    public class ActivateHandEvent : UnityEvent<OVRInput.Controller>
+    {
+    }
+
     public class StringEvent : UnityEvent<string>
     {
     }
@@ -20,7 +24,8 @@ namespace Managers
             {
                 Instance = this;
                 onExperienceStart = new UnityEvent();
-                onPieceDisconnected = new StringEvent();                
+                OnHandActivation = new ActivateHandEvent();
+                onPieceDisconnected = new StringEvent();
             }
             else
                 Destroy(gameObject);
@@ -30,8 +35,8 @@ namespace Managers
 
         #endregion
 
+        public ActivateHandEvent OnHandActivation;
         public UnityEvent onExperienceStart;
-
         public StringEvent onPieceDisconnected;
     }
 }

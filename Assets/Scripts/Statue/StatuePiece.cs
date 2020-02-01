@@ -9,9 +9,10 @@ namespace Statue
     [RequireComponent(typeof(Rigidbody))]
     public class StatuePiece : MonoBehaviour
     {
+        public bool IsOnTheFloor { get; private set; }
+        
         [SerializeField] private bool connected;
         private string _id;
-
         private int _connectedPieces;
 
         private Rigidbody _rb;
@@ -45,6 +46,27 @@ namespace Statue
 
         private void Start()
         {
+        }
+
+        public void ApplyForce(Vector3 impulse)
+        {
+            _rb.AddForce(impulse);
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.CompareTag("Floor"))
+                IsOnTheFloor = true;
+            
+            if(!other.transform.CompareTag("GameController") || !connected)
+                return;
+            EventManager.Instance.onPieceDisconnected.Invoke(_id);
+        }
+
+        private void OnCollisionExit(Collision other)
+        {
+            if (other.gameObject.CompareTag("Floor"))
+                IsOnTheFloor = false;
         }
 
         public bool IsPieceConnected()
@@ -91,13 +113,6 @@ namespace Statue
             transform.parent = null;
             _connectedPieces = 0;
             EventManager.Instance.onPieceDisconnected.RemoveListener(DisconnectObject);
-        }
-
-        private void OnCollisionEnter(Collision other)
-        {
-            if(!other.transform.CompareTag("GameController") || !connected)
-                return;
-            EventManager.Instance.onPieceDisconnected.Invoke(_id);
         }
     }
 }
