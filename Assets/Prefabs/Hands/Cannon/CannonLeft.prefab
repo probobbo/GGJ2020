@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roboHandType: 4
-  strength: 1
+  strength: 10
   usages: 1
   firePoint: {fileID: 8639794989939796987}
   bullet: {fileID: 3279504257767513575, guid: 81ab7eefef031aa4b98ada57f3fc8b64, type: 3}
-  bulletSpeed: 10
+  bulletSpeed: 650
 --- !u!1 &8639794989939796987
 GameObject:
   m_ObjectHideFlags: 0
