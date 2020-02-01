@@ -505,6 +505,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRPlayerController
       objectReference: {fileID: 0}
+    - target: {fileID: 1085558445092848321, guid: 228f70287f0a84343bea44b664ac4036,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 228f70287f0a84343bea44b664ac4036, type: 3}
 --- !u!1001 &389888067
