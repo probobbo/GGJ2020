@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.00.00">
 	<object class="MixerMaster" id="{a005430c-7952-4436-b2fb-bdb6e1810321}">
+		<property name="volume">
+			<value>1.5</value>
+		</property>
 		<property name="name">
 			<value>Master Bus</value>
 		</property>
@@ -35,7 +38,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{d01d231e-65a2-4a2e-be15-9b9a955677f5}" />
-	<object class="LimiterEffect" id="{9d0af6b5-d115-4992-9bb1-0f47696e2fd5}" />
+	<object class="LimiterEffect" id="{9d0af6b5-d115-4992-9bb1-0f47696e2fd5}">
+		<property name="boost">
+			<value>5.19999981</value>
+		</property>
+		<property name="ceiling">
+			<value>-1.0999999</value>
+		</property>
+	</object>
 	<object class="Plugin" id="{40503a31-d954-41ee-a32e-80dcc3163b44}">
 		<property name="identifier">
 			<value>Oculus Spatial Reverb</value>
@@ -230,7 +240,7 @@
 			<value>Wet Level</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>13</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,-60.000000)(1.000000,-40.000000)(2.000000,-20.000000)(3.000000,-12.000000)(4.000000,-6.000000)(5.000000,-2.000000)(6.000000,0.000000)(7.000000,2.000000)(8.000000,6.000000)(9.000000,12.000000)(10.000000,20.000000)}</value>

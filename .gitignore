@@ -36,6 +36,7 @@ sysinfo.txt
 /Assets/StreamingAssets/Master Bank.bank.meta
 /Assets/StreamingAssets/Master Bank.strings.bank
 /Assets/StreamingAssets/Master Bank.strings.bank.meta
+/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
 fmod.log
 fmod_editor.log
 
