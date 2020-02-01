@@ -1,7 +1,8 @@
 ﻿public enum RoboHandType
 {
-    Default,
+    Claw,
     Bat,
-    Hand2,
-    Hand3,
+    Godzilla,
+    Gun,
+    Cannon,
 }
