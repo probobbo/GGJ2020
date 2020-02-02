@@ -81,11 +81,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: GenericBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 4980089136711895789, guid: 9766b9ef6dc5f6145a436fa71a8e79eb,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6174164795447827254, guid: 9766b9ef6dc5f6145a436fa71a8e79eb,
         type: 3}
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 7941151628754260281, guid: 9766b9ef6dc5f6145a436fa71a8e79eb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96376404f9f40d84480d3861925fbf8b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9766b9ef6dc5f6145a436fa71a8e79eb, type: 3}
 --- !u!1 &4145420103267134990 stripped
