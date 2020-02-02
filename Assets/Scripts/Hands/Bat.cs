@@ -31,7 +31,7 @@ public class Bat : RoboHand
         strength *= batStrength;
         _mat.EnableKeyword("_EMISSION");
         _mat.SetColor(EmissionColor, Color.magenta);
-        _mat.SetColor(mainColor, Color.magenta);
+        //_mat.SetColor(mainColor, Color.magenta);
     }
 
     protected override void OnCollisionEnter(Collision other)
@@ -45,10 +45,22 @@ public class Bat : RoboHand
         {
             _mat.DisableKeyword("_EMISSION");
             _mat.SetColor(EmissionColor, Color.white);
-            _mat.SetColor(mainColor, col);
+            //_mat.SetColor(mainColor, col);
             strength /= batStrength;
         }
 
         _isActive = false;
+    }
+
+    public override void ResetHand()
+    {
+        base.ResetHand();
+        if (_isActive)
+        {
+            _mat.DisableKeyword("_EMISSION");
+            _mat.SetColor(EmissionColor, Color.white);
+            //_mat.SetColor(mainColor, col);
+            strength /= batStrength;
+        }
     }
 }

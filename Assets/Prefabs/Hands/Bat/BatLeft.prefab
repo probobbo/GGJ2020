@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   remains: {fileID: 3281136607875392804, guid: 82dc6ac62378d244a973fcb8e4e6f7d7, type: 3}
   roboHandType: 1
-  strength: 15
+  strength: 10
   usages: 3
   batStrength: 5
   mesh: {fileID: 7858371193727976956}
@@ -684,23 +684,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.084778, y: 0.8398967, z: 0.084778}
   m_Center: {x: 0, y: 0.054844588, z: 0}
---- !u!114 &-5226567197457822184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8265225930651374203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67284360afc815849ab33831cf9b6b28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  remains: {fileID: 3281136607875392804, guid: 82dc6ac62378d244a973fcb8e4e6f7d7, type: 3}
-  roboHandType: 1
-  strength: 10
-  usages: 3
-  batStrength: 5
 --- !u!1 &8387233831147786881
 GameObject:
   m_ObjectHideFlags: 0

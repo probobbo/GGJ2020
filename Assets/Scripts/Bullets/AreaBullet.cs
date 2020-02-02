@@ -15,7 +15,7 @@ public class AreaBullet : Bullet
         {
             var statuePiece = collision.gameObject.GetComponent<StatuePiece>();
             if (statuePiece == null) continue;
-            var direction = collision.transform.position - transform.position;
+            var direction = (collision.transform.position - transform.position).normalized;
             statuePiece.ApplyForce((direction * (strength)) + Vector3.up * 2f);
             Instantiate(explosion, transform.position, Quaternion.identity);
         }
