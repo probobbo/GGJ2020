@@ -12,7 +12,6 @@ public class MyButton : MonoBehaviour
     [SerializeField] private int sceneToLoad;
     private bool _alreadyTriggered = false;
     private CanvasGroup _canvasGroup;
-
     
     private void Start()
     {
@@ -22,7 +21,7 @@ public class MyButton : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(!other.CompareTag("GameController"))
+        if(!other.CompareTag("Wrist"))
             return;
         if (_alreadyTriggered) return;
         _alreadyTriggered = true;
