@@ -8,10 +8,12 @@ public class Gun : RoboHand
     public GameObject firePoint;
     public GameObject bullet;
     public float bulletSpeed = 10f;
+    public ParticleSystem particle;
 
     public override void ActivateHand()
     {
         var bull = Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
+        particle.Play();
         if (roboHandType == RoboHandType.Cannon)
         {
             AudioManager.PlayOneShotAudio("event:/SOUNDFX/SFX_Cannon", gameObject);
