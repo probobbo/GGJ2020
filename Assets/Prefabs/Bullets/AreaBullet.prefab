@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToLive: 10
   strength: 5
+  explosion: {fileID: 1776058881812142036, guid: 4fbc2613015257a45a609bceebfa8f19,
+    type: 3}
   area: 2
 --- !u!1001 &1975455225839396733
 PrefabInstance:
