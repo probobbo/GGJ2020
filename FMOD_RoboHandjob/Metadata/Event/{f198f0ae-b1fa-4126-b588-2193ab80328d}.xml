@@ -111,9 +111,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{ca24f766-9f28-482c-936b-69f8d72fe20c}">
-		<property name="volume">
-			<value>-6.5</value>
-		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -140,9 +137,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{4375e55d-bc76-4bd7-9cb4-d4816bf92161}">
-		<property name="volume">
-			<value>-3.5</value>
-		</property>
 		<property name="name">
 			<value>Audio 2</value>
 		</property>
@@ -246,7 +240,7 @@
 			<value>V. Radius</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>0.549999952</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)(2.000000,4.000000)(3.000000,11.000000)(4.000000,25.000000)(5.000000,100.000000)(6.000000,1000.000000)}</value>

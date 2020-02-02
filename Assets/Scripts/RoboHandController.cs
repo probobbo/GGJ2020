@@ -65,6 +65,31 @@ public class RoboHandController : MonoBehaviour
         ActiveHand.gameObject.SetActive(true);
         Debug.Log($"new hand type {ActiveHand.roboHandType}");
         EventManager.Instance.OnHandActivation.AddListener(ActivateHand);
+
+        var eventRef = "";
+        switch (ActiveHand.roboHandType)
+        {
+            case RoboHandType.Claw:
+                eventRef = "event:/SOUNDFX/Spawns/SFX_Spawn_Banana";
+                break;
+            case RoboHandType.Bat:
+                eventRef = "event:/SOUNDFX/Spawns/SFX_Spawn_BaseballBat";
+                break;
+            case RoboHandType.Godzilla:
+                eventRef = "event:/SOUNDFX/Spawns/SFX_Spawn_Chicken";
+                break;
+            case RoboHandType.Gun:
+                eventRef = "event:/SOUNDFX/Spawns/SFX_Spawn_Gun";
+                break;
+            case RoboHandType.Cannon:
+                eventRef = "event:/SOUNDFX/Spawns/SFX_Spawn_Cannon";
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+        
+        AudioManager.PlayOneShotAudio(eventRef, gameObject);
+
     }
 
     private void ActivateHand(OVRInput.Controller hand)

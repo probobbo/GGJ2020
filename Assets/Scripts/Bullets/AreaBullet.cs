@@ -11,7 +11,7 @@ public class AreaBullet : Bullet
         var collisions = Physics.OverlapSphere(transform.position, area);
         foreach (var collision in collisions)
         {
-            var statuePiece = collision.gameObject.GetComponentInParent<StatuePiece>();
+            var statuePiece = collision.gameObject.GetComponent<StatuePiece>();
             if (statuePiece == null) continue;
             var direction = collision.transform.position - transform.position;
             var impulse = Vector3.Distance(collision.transform.position,transform.position);
