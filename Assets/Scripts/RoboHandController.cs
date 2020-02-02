@@ -116,6 +116,7 @@ public class RoboHandController : MonoBehaviour
             remains.GetComponent<Rigidbody>().AddForce((remains.transform.up + remains.transform.forward) * 100f, ForceMode.Force);
             ActiveHand.gameObject.SetActive(false);
             ActiveHand.ResetHand();
+            ActiveHand = null;
         }
 
         HasHand = false;

@@ -1,6 +1,7 @@
 ﻿using System;
 using Managers;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Statue
 {
@@ -10,6 +11,7 @@ namespace Statue
         public bool isFixed;
         [SerializeField] private GameManager.Connection myConnection;
         private OVRGrabbable _grabbable;
+        [SerializeField] private ParticleSystem disgustingParticleSystem;
 
         private void Awake()
         {
@@ -27,6 +29,8 @@ namespace Statue
         {
             if (objectToActivate != null)
             {
+                if(isFixed)
+                    disgustingParticleSystem.Play();
                 objectToActivate.SetActive(true);
                 gameObject.SetActive(false);
             }
