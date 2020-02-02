@@ -1,8 +1,56 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-6940639707430339221
 =======
+=======
+--- !u!114 &-9100959019955794652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_RoboHandjob/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637162454112287838
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1568
+  - Name: Mobile
+    Value: 1568
+  Exists: 1
+--- !u!114 &-9047994175938503801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/Spawns/SFX_Spawn_BaseballBat
+  m_EditorClassIdentifier: 
+  Path: event:/SOUNDFX/Spawns/SFX_Spawn_BaseballBat
+  guid: 06366bbb019e1447a5e23c66e04ca1d4
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3100
+>>>>>>> master
 --- !u!114 &-7991279873889485447
 >>>>>>> master
 MonoBehaviour:
@@ -144,6 +192,46 @@ MonoBehaviour:
 --- !u!114 &-985867254206712410
 =======
   Length: 1139
+--- !u!114 &-7444213850231701764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/Spawns/SFX_Spawn_Cannon
+  m_EditorClassIdentifier: 
+  Path: event:/SOUNDFX/Spawns/SFX_Spawn_Cannon
+  guid: 8e36c8092acbd145a6ee621e5d6472b7
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1692
+--- !u!114 &-6938434830412064040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX_DispencerComplete/FillAmount
+  m_EditorClassIdentifier: 
+  Name: FillAmount
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-6311165104939687933
 >>>>>>> master
 MonoBehaviour:
@@ -277,6 +365,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 100
+--- !u!114 &-5188425845030060577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC/SFX_Menu
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC/SFX_Menu
+  guid: cc087597e7f3ef4dbfb7346f2cb07d64
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 15157
+--- !u!114 &-5162543804730280321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC/SFX_Gameplay
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC/SFX_Gameplay
+  guid: a09c204abda2344eb3ffa0408f882d23
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 16002
 --- !u!114 &-4499637599599200702
 >>>>>>> master
 MonoBehaviour:
@@ -332,6 +466,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 66861
+--- !u!114 &-3537880924633341809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/SFX_Cannon
+  m_EditorClassIdentifier: 
+  Path: event:/SOUNDFX/SFX_Cannon
+  guid: aef098f1fab12641b5882193ab80328d
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 5203
 --- !u!114 &-3250419812340559330
 >>>>>>> master
 MonoBehaviour:
@@ -369,6 +526,29 @@ MonoBehaviour:
 --- !u!114 &581463165097650798
 =======
   Length: 1245
+--- !u!114 &-3119374592174899947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Main
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Main
+  guid: 4124a9925e74fd4a914a28b0bba9cb03
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-2896827516228577623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,6 +644,29 @@ MonoBehaviour:
 --- !u!114 &1914438237437285123
 =======
   Length: 3529
+--- !u!114 &-1735714414549875897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/SFX_Detach
+  m_EditorClassIdentifier: 
+  Path: event:/SOUNDFX/SFX_Detach
+  guid: 96a149254908294388501d6515eb6442
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 800
 --- !u!114 &-787039068258961710
 >>>>>>> master
 MonoBehaviour:
@@ -502,6 +705,53 @@ MonoBehaviour:
 --- !u!114 &2484977917973232447
 =======
   Length: 3100
+--- !u!114 &-664439544406101316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/SFX_DispencerComplete
+  m_EditorClassIdentifier: 
+  Path: event:/SOUNDFX/SFX_DispencerComplete
+  guid: 4bdc9c4de027804f8db329e21bd3fae0
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6938434830412064040}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1319
+--- !u!114 &-507019545645923374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/Spawns/SFX_Spawn_Banana
+  m_EditorClassIdentifier: 
+  Path: event:/SOUNDFX/Spawns/SFX_Spawn_Banana
+  guid: a0fa8ce04d04b24d924613b8c60d28fb
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3529
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,32 +765,32 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -2896827516228577623}
-  - {fileID: 8482141469904951833}
+  - {fileID: -9100959019955794652}
+  - {fileID: 4822682679918717232}
   EditorEvents:
-  - {fileID: -787039068258961710}
-  - {fileID: 5818053336627226640}
-  - {fileID: -3250419812340559330}
-  - {fileID: 2180162423354498245}
-  - {fileID: -7991279873889485447}
-  - {fileID: -2628947001362865209}
-  - {fileID: -6311165104939687933}
-  - {fileID: -7939252443023046908}
-  - {fileID: -4499637599599200702}
-  - {fileID: 1069002036703598931}
-  - {fileID: 1401042475192938301}
-  - {fileID: -2341114818590802733}
-  - {fileID: 3540518065511996512}
-  - {fileID: 183803203637809875}
-  - {fileID: -5763793296531457319}
-  - {fileID: -5376053084569001195}
-  - {fileID: -3857170252939550135}
+  - {fileID: -9047994175938503801}
+  - {fileID: 9223014788774089099}
+  - {fileID: 870394521141779661}
+  - {fileID: -3119374592174899947}
+  - {fileID: -664439544406101316}
+  - {fileID: 357680155987909225}
+  - {fileID: 1325652318193503061}
+  - {fileID: 8049716403200746185}
+  - {fileID: -7444213850231701764}
+  - {fileID: -1735714414549875897}
+  - {fileID: -5162543804730280321}
+  - {fileID: -507019545645923374}
+  - {fileID: 3807615265506743677}
+  - {fileID: -3537880924633341809}
+  - {fileID: -5188425845030060577}
+  - {fileID: 1068778885142416957}
+  - {fileID: 9029537008481957759}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 8482141469904951833}
+  - {fileID: 4822682679918717232}
   StringsBanks:
-  - {fileID: -2896827516228577623}
-  stringsBankWriteTime: 637162455406196926
+  - {fileID: -9100959019955794652}
+  stringsBankWriteTime: 637162454112287838
   cacheVersion: 3
 --- !u!114 &183803203637809875
 >>>>>>> master
@@ -579,6 +829,52 @@ MonoBehaviour:
 --- !u!114 &2707836671946157279
 =======
   Length: 5203
+--- !u!114 &357680155987909225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/SFX_Test
+  m_EditorClassIdentifier: 
+  Path: event:/SOUNDFX/SFX_Test
+  guid: 4bf3d5da6723404eb4c09c435035806d
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2127
+--- !u!114 &870394521141779661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/SFX_Gunshot
+  m_EditorClassIdentifier: 
+  Path: event:/SOUNDFX/SFX_Gunshot
+  guid: 2feef6cef603844d9ce5d1c23783e027
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1245
 --- !u!114 &873703461653210525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,6 +892,30 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &1068778885142416957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/SFX_DispencerFiller
+  m_EditorClassIdentifier: 
+  Path: event:/SOUNDFX/SFX_DispencerFiller
+  guid: d4ffa1b397e0ee4e90fd6483e26e5d65
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4097368472787133574}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 100
 --- !u!114 &1069002036703598931
 >>>>>>> master
 MonoBehaviour:
@@ -634,6 +954,29 @@ MonoBehaviour:
 --- !u!114 &3108792714434945658
 =======
   Length: 800
+--- !u!114 &1325652318193503061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/Spawns/SFX_Spawn_Chicken
+  m_EditorClassIdentifier: 
+  Path: event:/SOUNDFX/Spawns/SFX_Spawn_Chicken
+  guid: 56a6d08442f4be4e9a1d70f753296b09
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1316
 --- !u!114 &1401042475192938301
 >>>>>>> master
 MonoBehaviour:
@@ -743,6 +1086,64 @@ MonoBehaviour:
 --- !u!114 &4829148674016332391
 =======
   Length: 1005
+--- !u!114 &3807615265506743677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/Spawns/SFX_Spawn_Gun
+  m_EditorClassIdentifier: 
+  Path: event:/SOUNDFX/Spawns/SFX_Spawn_Gun
+  guid: a2686e9921b6474e89705e9af96c5fbb
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1005
+--- !u!114 &4097368472787133574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX_DispencerFiller/FillAmount
+  m_EditorClassIdentifier: 
+  Name: FillAmount
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &4822682679918717232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_RoboHandjob/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637162454112267713
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &5818053336627226640
 >>>>>>> master
 MonoBehaviour:
@@ -780,6 +1181,29 @@ MonoBehaviour:
 --- !u!114 &6007143507296340105
 =======
   Length: 11889
+--- !u!114 &8049716403200746185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/SFX_CompleteTask
+  m_EditorClassIdentifier: 
+  Path: event:/SOUNDFX/SFX_CompleteTask
+  guid: 848e369c6074644f9539f50e6ed428df
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1139
 --- !u!114 &8181751453830607185
 >>>>>>> master
 MonoBehaviour:
@@ -847,3 +1271,49 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &9029537008481957759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AMBIENCE/AMB_Menu
+  m_EditorClassIdentifier: 
+  Path: event:/AMBIENCE/AMB_Menu
+  guid: f402fbf6fcc14b4090a0727bae843e1f
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 66861
+--- !u!114 &9223014788774089099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SOUNDFX/SFX_Sparkle
+  m_EditorClassIdentifier: 
+  Path: event:/SOUNDFX/SFX_Sparkle
+  guid: 23c1032fcb08f640a8927ec6f149b9a1
+  Banks:
+  - {fileID: 4822682679918717232}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 11889

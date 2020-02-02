@@ -680,7 +680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   remains: {fileID: 3281136607875392804, guid: 82dc6ac62378d244a973fcb8e4e6f7d7, type: 3}
   roboHandType: 1
-  strength: 15
+  strength: 10
   usages: 3
   batStrength: 5
 --- !u!1 &8387233831147786881
