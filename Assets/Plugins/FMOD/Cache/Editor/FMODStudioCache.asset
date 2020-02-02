@@ -32,7 +32,7 @@ MonoBehaviour:
   Path: event:/SOUNDFX/SFX_Test
   guid: 4bf3d5da6723404eb4c09c435035806d
   Banks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -55,7 +55,7 @@ MonoBehaviour:
   Path: event:/MUSIC/SFX_Gameplay
   guid: a09c204abda2344eb3ffa0408f882d23
   Banks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   Path: snapshot:/Main
   guid: 4124a9925e74fd4a914a28b0bba9cb03
   Banks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   Path: event:/SOUNDFX/Spawns/SFX_Spawn_Chicken
   guid: 56a6d08442f4be4e9a1d70f753296b09
   Banks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -229,7 +229,7 @@ MonoBehaviour:
   Path: event:/SOUNDFX/Spawns/SFX_Spawn_BaseballBat
   guid: 06366bbb019e1447a5e23c66e04ca1d4
   Banks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -253,7 +253,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4679069024347899510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,7 +389,7 @@ MonoBehaviour:
   Path: event:/SOUNDFX/SFX_Gunshot
   guid: 2feef6cef603844d9ce5d1c23783e027
   Banks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -412,12 +412,12 @@ MonoBehaviour:
   Path: event:/SOUNDFX/SFX_DispencerFiller
   guid: d4ffa1b397e0ee4e90fd6483e26e5d65
   Banks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -4829785136863745987}
+  - {fileID: 8094782551446581330}
   MinDistance: 0
   MaxDistance: 0
   Length: 100
@@ -471,7 +471,7 @@ MonoBehaviour:
   Path: event:/AMBIENCE/AMB_Menu
   guid: f402fbf6fcc14b4090a0727bae843e1f
   Banks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -546,15 +546,32 @@ MonoBehaviour:
   Path: event:/SOUNDFX/SFX_DispencerComplete
   guid: 4bdc9c4de027804f8db329e21bd3fae0
   Banks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -651125421597660265}
+  - {fileID: 496938500433317308}
   MinDistance: 0
   MaxDistance: 0
   Length: 1319
+--- !u!114 &-1271847245870152455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX_DispencerFiller/FillAmount
+  m_EditorClassIdentifier: 
+  Name: FillAmount
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-1057375980585631922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,7 +604,7 @@ MonoBehaviour:
   Path: event:/SOUNDFX/SFX_Complete
   guid: 848e369c6074644f9539f50e6ed428df
   Banks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -611,7 +628,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-599347715573711622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,7 +679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 3519945994645428749}
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   EditorEvents:
   - {fileID: -7734491926300383152}
   - {fileID: -1348410137854521327}
@@ -681,11 +698,28 @@ MonoBehaviour:
   - {fileID: 5335086615718438406}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   StringsBanks:
   - {fileID: 3519945994645428749}
-  stringsBankWriteTime: 637162354332692649
+  stringsBankWriteTime: 637162363161354994
   cacheVersion: 3
+--- !u!114 &496938500433317308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX_DispencerComplete/FillAmount
+  m_EditorClassIdentifier: 
+  Name: FillAmount
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &545851500325798976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,7 +772,7 @@ MonoBehaviour:
   lastModified: 637162354332662735
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &1132766636891888038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,7 +840,7 @@ MonoBehaviour:
   Path: event:/SOUNDFX/Spawns/SFX_Spawn_Banana
   guid: a0fa8ce04d04b24d924613b8c60d28fb
   Banks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -917,7 +951,7 @@ MonoBehaviour:
   Path: event:/SOUNDFX/Spawns/SFX_Spawn_Cannon
   guid: 8e36c8092acbd145a6ee621e5d6472b7
   Banks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -973,7 +1007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_RoboHandjob/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637162354332692649
+  lastModified: 637162363161354994
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1033,6 +1067,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &4837784663775852680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_RoboHandjob/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637162363161198720
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &4972902775213664881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1083,7 +1135,7 @@ MonoBehaviour:
   Path: event:/SOUNDFX/Spawns/SFX_Spawn_Gun
   guid: a2686e9921b6474e89705e9af96c5fbb
   Banks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1106,7 +1158,7 @@ MonoBehaviour:
   Path: event:/MUSIC/SFX_Menu
   guid: cc087597e7f3ef4dbfb7346f2cb07d64
   Banks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1147,6 +1199,24 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 1
+--- !u!114 &6073316849734258164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_RoboHandjob/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637161984940853718
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &6172857702837164028
 MonoBehaviour:
@@ -1233,7 +1303,7 @@ MonoBehaviour:
   Path: event:/SOUNDFX/SFX_Cannon
   guid: aef098f1fab12641b5882193ab80328d
   Banks:
-  - {fileID: 1063755465934841751}
+  - {fileID: 4837784663775852680}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1365,3 +1435,20 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &8094782551446581330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX_DispencerFiller/FillAmount
+  m_EditorClassIdentifier: 
+  Name: FillAmount
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
