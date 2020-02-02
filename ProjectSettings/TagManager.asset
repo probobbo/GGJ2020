@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Joint
   - Floor
+  - FxTemporaire
+  - Wrist
   layers:
   - Default
   - TransparentFX
