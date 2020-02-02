@@ -41,7 +41,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631295325346457797}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.023159707, y: 0.099833325, z: 0.043998238}
@@ -88,6 +88,8 @@ GameObject:
   - component: {fileID: 9151772189141017443}
   - component: {fileID: 5310975356876449337}
   - component: {fileID: 3953435655713475168}
+  - component: {fileID: 7353238617774079784}
+  - component: {fileID: 7353238617774079783}
   m_Layer: 0
   m_Name: CarBody
   m_TagString: Untagged
@@ -171,6 +173,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7353238617774079784
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047341090845160263}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.31587106, y: 0.10716801, z: 0.2744877}
+  m_Center: {x: -0.004516876, y: 0.18247947, z: 0.034924038}
+--- !u!65 &7353238617774079783
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047341090845160263}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.31587106, y: 0.094323024, z: 0.60728973}
+  m_Center: {x: -0.004516876, y: 0.09, z: 0.056526948}
 --- !u!1 &1525064986378295080
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +282,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057294002430887065}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.0248899, y: 0.045062926, z: 0.08778838}
@@ -732,7 +760,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6028814999040864290}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.024889888, y: 0.045062926, z: 0.06304825}
@@ -970,7 +998,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8011200279278905629}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.023159707, y: 0.099833325, z: 0.043998238}
