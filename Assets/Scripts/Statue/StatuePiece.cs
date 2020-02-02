@@ -21,6 +21,7 @@ namespace Statue
         private void Awake()
         {
             _grabbable = GetComponent<OVRGrabbable>();
+            _rb = GetComponent<Rigidbody>();
            if(transform.childCount<=0)
                Destroy(gameObject);
            _joint = transform.GetChild(0).GetComponent<ConnectionJoint>();
@@ -30,7 +31,7 @@ namespace Statue
 
         public void ApplyForce(Vector3 impulse)
         {
-                _rb.AddForce(impulse,ForceMode.Impulse);
+            _rb.AddForce(impulse,ForceMode.Impulse);
         }
 
         private void OnCollisionEnter(Collision other)
