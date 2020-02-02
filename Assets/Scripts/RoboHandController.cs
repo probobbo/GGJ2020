@@ -118,6 +118,7 @@ public class RoboHandController : MonoBehaviour
             ActiveHand.gameObject.SetActive(false);
             AudioManager.PlayOneShotAudio("event:/SOUNDFX/SFX_Detach", gameObject);
             ActiveHand.ResetHand();
+            ActiveHand = null;
         }
 
         HasHand = false;
