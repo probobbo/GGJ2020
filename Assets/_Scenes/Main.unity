@@ -2678,6 +2678,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Macchina
       objectReference: {fileID: 0}
+    - target: {fileID: 1872835961669849176, guid: 679f677318824624e8b36f7eed5f0af6,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2553900935095002427, guid: 679f677318824624e8b36f7eed5f0af6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2732,6 +2737,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381060311213409441, guid: 679f677318824624e8b36f7eed5f0af6,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5989375623280663903, guid: 679f677318824624e8b36f7eed5f0af6,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6990521447291982186, guid: 679f677318824624e8b36f7eed5f0af6,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7904940438413846481, guid: 679f677318824624e8b36f7eed5f0af6,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417425277478956201, guid: 679f677318824624e8b36f7eed5f0af6,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 679f677318824624e8b36f7eed5f0af6, type: 3}
