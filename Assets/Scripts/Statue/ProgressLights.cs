@@ -24,5 +24,6 @@ public class ProgressLights : MonoBehaviour
             currentLight.material.color = Color.green;
             currentLight.material.SetColor(EMISSION_COLOR, Color.green);
             currentLight.material.EnableKeyword("_EMISSION");
+        AudioManager.PlayOneShotAudio("event:/SOUNDFX/SFX_CompleteTask",gameObject);
     }
 }
