@@ -60,7 +60,7 @@
 	<object class="MarkerTrack" id="{ee80a885-5675-40ad-b1ea-839c557fe7fd}" />
 	<object class="GroupTrack" id="{e26a011d-41a4-4f28-b11e-3e89743e2b0b}">
 		<relationship name="modules">
-			<destination>{d6415dfe-a973-43e9-b9eb-44827279b4e4}</destination>
+			<destination>{1d3bdb99-dd46-4596-b7ba-798e9f591466}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{a7f4a810-5c7f-4497-b83b-b9cb559f3375}</destination>
@@ -68,7 +68,7 @@
 	</object>
 	<object class="Timeline" id="{94319355-24fe-49c1-9bb0-527f1d1e99fa}">
 		<relationship name="modules">
-			<destination>{d6415dfe-a973-43e9-b9eb-44827279b4e4}</destination>
+			<destination>{1d3bdb99-dd46-4596-b7ba-798e9f591466}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{8f0572ec-d68a-4d3c-8ea6-ebd94952f93d}</destination>
@@ -94,7 +94,7 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{572d877e-7627-4825-b2de-e7be2e73a449}" />
-	<object class="SingleSound" id="{d6415dfe-a973-43e9-b9eb-44827279b4e4}">
+	<object class="SingleSound" id="{1d3bdb99-dd46-4596-b7ba-798e9f591466}">
 		<property name="isAsync">
 			<value>true</value>
 		</property>
@@ -102,16 +102,19 @@
 			<value>true</value>
 		</property>
 		<property name="length">
-			<value>16.002770833333333</value>
+			<value>28.120125000000002</value>
 		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{570b3993-a019-4e94-a7d3-9442219fe68c}</destination>
+			<destination>{355fe876-3f07-43a0-9e69-83a56eb606a3}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{a7f4a810-5c7f-4497-b83b-b9cb559f3375}">
+		<property name="volume">
+			<value>4.5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -176,10 +179,10 @@
 			<value>10</value>
 		</property>
 		<property name="frequencyA">
-			<value>1519.33789</value>
+			<value>2160.84595</value>
 		</property>
 		<property name="qualityA">
-			<value>0.476758599</value>
+			<value>0.20465517</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{0552fc23-26a7-40f4-bc65-f37004ec51a4}" />
