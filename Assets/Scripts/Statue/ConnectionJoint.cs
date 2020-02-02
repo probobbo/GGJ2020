@@ -40,6 +40,7 @@ namespace Statue
                     Debug.Log("ITS GOING");
                     otherJoint.ShowObject();
                     transform.parent.gameObject.SetActive(false);
+                    EventManager.Instance.onPieceConnected.Invoke();
                 }
             }
         }

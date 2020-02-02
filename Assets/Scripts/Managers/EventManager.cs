@@ -26,6 +26,7 @@ namespace Managers
                 onExperienceStart = new UnityEvent();
                 OnHandActivation = new ActivateHandEvent();
                 onPieceDisconnected = new ImpulseEvent();
+                onPieceConnected = new UnityEvent();
             }
             else
                 Destroy(gameObject);
@@ -38,5 +39,6 @@ namespace Managers
         public ActivateHandEvent OnHandActivation;
         public UnityEvent onExperienceStart;
         public ImpulseEvent onPieceDisconnected;
+        public UnityEvent onPieceConnected;
     }
 }
