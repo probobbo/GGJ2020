@@ -45,7 +45,7 @@ MonoBehaviour:
   remains: {fileID: 3782847313640496448, guid: e8c4c27eac89e5546856b049528f229f, type: 3}
   roboHandType: 3
   strength: 1
-  usages: 6
+  usages: 10
   firePoint: {fileID: 4965398153217236267}
   bullet: {fileID: 4145420103267134990, guid: 85c68ac4057cdfe4f83dc0c598356cb3, type: 3}
   bulletSpeed: 900

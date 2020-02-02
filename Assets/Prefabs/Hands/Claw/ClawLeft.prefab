@@ -50,7 +50,7 @@ MonoBehaviour:
   remains: {fileID: 4868344910327995885, guid: dbfde96a29033f140af423b70dfcd5e3, type: 3}
   roboHandType: 0
   strength: 1
-  usages: 10
+  usages: 5
 --- !u!1001 &7133415150878644519
 PrefabInstance:
   m_ObjectHideFlags: 0
