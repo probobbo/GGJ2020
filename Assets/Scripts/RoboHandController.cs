@@ -112,9 +112,11 @@ public class RoboHandController : MonoBehaviour
         if (ActiveHand != null)
         {
             EventManager.Instance.OnHandActivation.RemoveListener(ActivateHand);
-            var remains = Instantiate(ActiveHand.remains,ActiveHand.transform.position,ActiveHand.transform.rotation);
-            remains.GetComponent<Rigidbody>().AddForce((remains.transform.up + remains.transform.forward) * 100f, ForceMode.Force);
+            var remains = Instantiate(ActiveHand.remains, ActiveHand.transform.position, ActiveHand.transform.rotation);
+            remains.GetComponent<Rigidbody>()
+                .AddForce((remains.transform.up + remains.transform.forward) * 100f, ForceMode.Force);
             ActiveHand.gameObject.SetActive(false);
+            AudioManager.PlayOneShotAudio("event:/SOUNDFX/SFX_Detach", gameObject);
             ActiveHand.ResetHand();
             ActiveHand = null;
         }
