@@ -9,9 +9,11 @@ namespace Statue
         [SerializeField] private GameObject objectToActivate;
         public bool isFixed;
         [SerializeField] private GameManager.Connection myConnection;
+        private OVRGrabbable _grabbable;
 
         private void Awake()
         {
+            _grabbable = GetComponentInParent<OVRGrabbable>();
             if (objectToActivate != null)
                 objectToActivate.SetActive(false);
         }
@@ -39,6 +41,8 @@ namespace Statue
                 {
                     Debug.Log("ITS GOING");
                     otherJoint.ShowObject();
+                    if (_grabbable.grabbedBy != null)
+                        _grabbable.grabbedBy.ForceRelease(_grabbable);
                     transform.parent.gameObject.SetActive(false);
                     EventManager.Instance.onPieceConnected.Invoke();
                 }

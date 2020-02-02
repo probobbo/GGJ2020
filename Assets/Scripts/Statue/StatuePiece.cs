@@ -13,25 +13,23 @@ namespace Statue
         public bool IsOnTheFloor { get; private set; }
 
         private Rigidbody _rb;
-        private OVRGrabbable _grabbable;
-
-        private ConnectionJoint _joint; 
+        private ConnectionJoint _joint;
 
         //initialize joint list and destroy object if none are found
         private void Awake()
         {
-            _grabbable = GetComponent<OVRGrabbable>();
             _rb = GetComponent<Rigidbody>();
-           if(transform.childCount<=0)
-               Destroy(gameObject);
-           _joint = transform.GetChild(0).GetComponent<ConnectionJoint>();
-           if(_joint==null)
-               Destroy(gameObject);
+            _joint = transform.GetChild(0).GetComponent<ConnectionJoint>();
+
+            if (transform.childCount <= 0)
+                Destroy(gameObject);
+            if (_joint == null)
+                Destroy(gameObject);
         }
 
         public void ApplyForce(Vector3 impulse)
         {
-            _rb.AddForce(impulse,ForceMode.Impulse);
+            _rb.AddForce(impulse, ForceMode.Impulse);
         }
 
         private void OnCollisionEnter(Collision other)
@@ -49,6 +47,5 @@ namespace Statue
             if (other.gameObject.CompareTag("Floor"))
                 IsOnTheFloor = false;
         }
-        
     }
 }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e021dcc83e1cf334c9369d88631b8bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  remains: {fileID: 3596904014177228281, guid: 08457019aeae5924b9406bbb45f84e3f, type: 3}
   roboHandType: 4
   strength: 10
   usages: 1

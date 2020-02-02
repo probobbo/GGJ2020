@@ -8,6 +8,8 @@ using UnityEngine;
 
 public class RoboHand : MonoBehaviour
 {
+
+    public GameObject remains;
     public RoboHandType roboHandType;
     public float strength = 1f;
     public float usages = 1f;
@@ -55,6 +57,7 @@ public class RoboHand : MonoBehaviour
 
     public void DetachHand()
     {
+        //Istanzia prefab mano a caso
         _roboHandController.SetDefaultHand();
     }
 
