@@ -121,6 +121,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-6553810260176614313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX_DispencerComplete/FillAmount
+  m_EditorClassIdentifier: 
+  Name: FillAmount
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-6539879476456323685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -753,7 +770,11 @@ MonoBehaviour:
   - {fileID: 773517232357694221}
   StringsBanks:
   - {fileID: 3519945994645428749}
+<<<<<<< HEAD
   stringsBankWriteTime: 637162411237789663
+=======
+  stringsBankWriteTime: 637162371885417015
+>>>>>>> master
   cacheVersion: 3
 --- !u!114 &496938500433317308
 MonoBehaviour:
@@ -1094,7 +1115,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD_RoboHandjob/Build/Desktop/Master.strings.bank
   SubDir: 
+<<<<<<< HEAD
   lastModified: 637162411237789663
+=======
+  lastModified: 637162371885417015
+>>>>>>> master
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1264,6 +1289,23 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/SFX_DispencerComplete/FillAmount
+  m_EditorClassIdentifier: 
+  Name: FillAmount
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &5805792871449487784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX_DispencerFiller/FillAmount
   m_EditorClassIdentifier: 
   Name: FillAmount
   Min: 0
@@ -1488,6 +1530,24 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &6955517470593358078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD_RoboHandjob/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637162371885397080
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &7174538505993867202
 MonoBehaviour:
   m_ObjectHideFlags: 0

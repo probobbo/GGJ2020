@@ -18,6 +18,7 @@ public class HandDispenser : MonoBehaviour
     [SerializeField] private Ease easeType;
 
     [SerializeField] private EventInstance _eventInstance;
+    [SerializeField] private ParticleSystem sparks;
 
     private Tweener routing;
 
@@ -36,6 +37,7 @@ public class HandDispenser : MonoBehaviour
         if (hand.HasHand) return;
 
         _handSwitchCoroutine = StartCoroutine(Fill(hand));
+        sparks.Play();
     }
 
 
@@ -50,6 +52,7 @@ public class HandDispenser : MonoBehaviour
         //TODO Particellare
         circle.fillAmount = 0f;
         AudioManager.StopAudio(_eventInstance);
+        sparks.Stop();
         AudioManager.PlayOneShotAudio("event:/SOUNDFX/SFX_DispencerComplete", gameObject);
 
     }
@@ -67,6 +70,7 @@ public class HandDispenser : MonoBehaviour
         AudioManager.StopAudio(_eventInstance);
         if (_handSwitchCoroutine != null)
             StopCoroutine(_handSwitchCoroutine);
+        sparks.Stop();
         _unfillCoroutine = StartCoroutine(UnFill());
     }
 }
