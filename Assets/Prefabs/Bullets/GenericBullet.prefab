@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToLive: 10
-  strength: 20
+  strength: 10
 --- !u!1001 &1111936308118656148
 PrefabInstance:
   m_ObjectHideFlags: 0
